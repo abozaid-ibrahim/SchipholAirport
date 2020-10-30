@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-typealias Airport = String
 enum Destination {
     case mainTab
     case airportDetails(of: Airport?)
@@ -19,7 +18,7 @@ enum Destination {
             let tab = UITabBarController()
             tab.setViewControllers([AirportsTableController(), AirportsTableController()], animated: true)
             return tab
-        case let .airportDetails(contact):
+        case let .airportDetails(airport):
             return UIViewController()
         }
     }

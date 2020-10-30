@@ -1,0 +1,474 @@
+[
+{
+"id": "3O",
+"name": "Air Arabia Maroc"
+},
+{
+"id": "5D",
+"name": "AeroMexico Connect"
+},
+{
+"id": "5Y",
+"name": "Atlas Air"
+},
+{
+"id": "6R",
+"name": "Aerounion"
+},
+{
+"id": "AA",
+"name": "American Airlines"
+},
+{
+"id": "AB",
+"name": "Air Berlin"
+},
+{
+"id": "AC",
+"name": "Air Canada"
+},
+{
+"id": "AF",
+"name": "Air France"
+},
+{
+"id": "AM",
+"name": "Aeromexico"
+},
+{
+"id": "AS",
+"name": "Alaska Airlines"
+},
+{
+"id": "AT",
+"name": "Royal Air Maroc"
+},
+{
+"id": "AY",
+"name": "Finnair"
+},
+{
+"id": "AZ",
+"name": "Alitalia"
+},
+{
+"id": "B2",
+"name": "Belavia"
+},
+{
+"id": "B6",
+"name": "JetBlue Airways"
+},
+{
+"id": "BA",
+"name": "British Airways"
+},
+{
+"id": "BE",
+"name": "FlyBE"
+},
+{
+"id": "BR",
+"name": "EVA Air"
+},
+{
+"id": "BT",
+"name": "airBaltic"
+},
+{
+"id": "CA",
+"name": "Air China International"
+},
+{
+"id": "CI",
+"name": "China Airlines"
+},
+{
+"id": "CJ",
+"name": "BA CityFlyer"
+},
+{
+"id": "CK",
+"name": "China Cargo"
+},
+{
+"id": "CL",
+"name": "Lufthansa Cityline"
+},
+{
+"id": "CM",
+"name": "Copa Airlines"
+},
+{
+"id": "CV",
+"name": "Cargolux Airlines International"
+},
+{
+"id": "CX",
+"name": "Cathay Pacific Airways"
+},
+{
+"id": "CY",
+"name": "Cyprus Airways"
+},
+{
+"id": "CZ",
+"name": "China Southern"
+},
+{
+"id": "DJ",
+"name": "Virgin Australia"
+},
+{
+"id": "DL",
+"name": "Delta Air Lines"
+},
+{
+"id": "DY",
+"name": "Norwegian Air Shuttle"
+},
+{
+"id": "EI",
+"name": "Aer Lingus"
+},
+{
+"id": "EK",
+"name": "Emirates"
+},
+{
+"id": "EW",
+"name": "Eurowings"
+},
+{
+"id": "EY",
+"name": "Etihad Airways"
+},
+{
+"id": "F9",
+"name": "Frontier Airlines"
+},
+{
+"id": "FB",
+"name": "Bulgaria Air"
+},
+{
+"id": "FI",
+"name": "Icelandair"
+},
+{
+"id": "FL",
+"name": "AirTran Airways"
+},
+{
+"id": "G4",
+"name": "Allegiant Air"
+},
+{
+"id": "HA",
+"name": "Hawaiian Airlines"
+},
+{
+"id": "HV",
+"name": "Transavia"
+},
+{
+"id": "IB",
+"name": "Iberia"
+},
+{
+"id": "IQ",
+"name": "Augsburg Airways"
+},
+{
+"id": "JL",
+"name": "JAL"
+},
+{
+"id": "JP",
+"name": "Adria Airways"
+},
+{
+"id": "JU",
+"name": "Jat Airways"
+},
+{
+"id": "K2",
+"name": "EuroLot"
+},
+{
+"id": "K4",
+"name": "Kalitta Air"
+},
+{
+"id": "KC",
+"name": "Air Astana"
+},
+{
+"id": "KE",
+"name": "Korean Air"
+},
+{
+"id": "KF",
+"name": "Blue1"
+},
+{
+"id": "KL",
+"name": "KLM"
+},
+{
+"id": "KM",
+"name": "Air Malta"
+},
+{
+"id": "KQ",
+"name": "Kenya Airways"
+},
+{
+"id": "KZ",
+"name": "Nippon Cargo"
+},
+{
+"id": "LA",
+"name": "Lan Airlines"
+},
+{
+"id": "LH",
+"name": "Lufthansa"
+},
+{
+"id": "LO",
+"name": "LOT - Polish Airlines"
+},
+{
+"id": "LR",
+"name": "LACSA"
+},
+{
+"id": "LS",
+"name": "Jet2.com"
+},
+{
+"id": "LX",
+"name": "SWISS"
+},
+{
+"id": "LY",
+"name": "El Al"
+},
+{
+"id": "MH",
+"name": "Malaysia Airline"
+},
+{
+"id": "MP",
+"name": "Martinair"
+},
+{
+"id": "MQ",
+"name": "American Eagle"
+},
+{
+"id": "MS",
+"name": "Egyptair"
+},
+{
+"id": "MU",
+"name": "China Eastern Airlines"
+},
+{
+"id": "MY",
+"name": "Aerotransportes Mas de Carga"
+},
+{
+"id": "NH",
+"name": "ANA - All Nippon Airways"
+},
+{
+"id": "NI",
+"name": "Portugalia Airlines"
+},
+{
+"id": "NK",
+"name": "Spirit Airlines"
+},
+{
+"id": "NZ",
+"name": "Air New Zealand"
+},
+{
+"id": "OK",
+"name": "Czech Airlines"
+},
+{
+"id": "OO",
+"name": "SkyWest Airlines"
+},
+{
+"id": "OR",
+"name": "Arkefly"
+},
+{
+"id": "OU",
+"name": "Croatia Airlines"
+},
+{
+"id": "OV",
+"name": "Estonian Air"
+},
+{
+"id": "OZ",
+"name": "Asiana Airlines"
+},
+{
+"id": "PC",
+"name": "Pegasus Airlines"
+},
+{
+"id": "PK",
+"name": "Pakistan International Airlines"
+},
+{
+"id": "PO",
+"name": "Polar Air Cargo"
+},
+{
+"id": "PR",
+"name": "Philippine Airlines"
+},
+{
+"id": "PS",
+"name": "Ukraine International"
+},
+{
+"id": "PY",
+"name": "Surinam Airways"
+},
+{
+"id": "QF",
+"name": "Qantas Airways"
+},
+{
+"id": "QX",
+"name": "Horizon Air"
+},
+{
+"id": "RJ",
+"name": "Royal Jordanian"
+},
+{
+"id": "RO",
+"name": "Tarom"
+},
+{
+"id": "RU",
+"name": "AirBridge Cargo"
+},
+{
+"id": "SK",
+"name": "SAS - Scandinavian Airlines"
+},
+{
+"id": "SOO",
+"name": "Southern Air Inc."
+},
+{
+"id": "SQ",
+"name": "Singapore Airlines"
+},
+{
+"id": "SU",
+"name": "Aeroflot"
+},
+{
+"id": "SX",
+"name": "Sky Work Airlines"
+},
+{
+"id": "SY",
+"name": "Sun Country Airlines"
+},
+{
+"id": "TA",
+"name": "TACA"
+},
+{
+"id": "TK",
+"name": "Turkish Airlines"
+},
+{
+"id": "TN",
+"name": "Air Tahiti Nui"
+},
+{
+"id": "TP",
+"name": "TAP-Air Portugal"
+},
+{
+"id": "U2",
+"name": "easyJet"
+},
+{
+"id": "UA",
+"name": "United Airlines"
+},
+{
+"id": "US",
+"name": "US Airways"
+},
+{
+"id": "UX",
+"name": "Air Europa"
+},
+{
+"id": "VA",
+"name": "V Australia"
+},
+{
+"id": "VO",
+"name": "Tyrolean Airways"
+},
+{
+"id": "VS",
+"name": "Virgin Atlantic Airways"
+},
+{
+"id": "VX",
+"name": "Virgin America"
+},
+{
+"id": "VY",
+"name": "Vueling"
+},
+{
+"id": "WA",
+"name": "KLM Cityhopper"
+},
+{
+"id": "WN",
+"name": "Southwest Airlines"
+},
+{
+"id": "WS",
+"name": "WestJet"
+},
+{
+"id": "WX",
+"name": "Cityjet"
+},
+{
+"id": "Y4",
+"name": "Volaris"
+},
+{
+"id": "Y8",
+"name": "Yangtze River Express"
+},
+{
+"id": "YS",
+"name": "Regional Compagnie Aerienne Europeene"
+},
+{
+"id": "ZK",
+"name": "Great Lakes Aviation"
+}
+]
