@@ -15,6 +15,15 @@
 		6C47DFE9254CBD02005FA5A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFE8254CBD02005FA5A4 /* Preview Assets.xcassets */; };
 		6C47DFEC254CBD02005FA5A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */; };
 		6C47DFF7254CBD02005FA5A4 /* SchipholAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */; };
+		6C47E007254CC2D1005FA5A4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E005254CC285005FA5A4 /* Destination.swift */; };
+		6C47E008254CC2D1005FA5A4 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E006254CC285005FA5A4 /* Navigator.swift */; };
+		6C47E00A254CC5D8005FA5A4 /* AirportsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E009254CC5D8005FA5A4 /* AirportsTableController.swift */; };
+		6C47E00D254CC70F005FA5A4 /* AirportTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E00B254CC70F005FA5A4 /* AirportTableCell.swift */; };
+		6C47E00E254CC70F005FA5A4 /* AirportTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C47E00C254CC70F005FA5A4 /* AirportTableCell.xib */; };
+		6C47E014254CC75C005FA5A4 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E010254CC731005FA5A4 /* UIView+Layer.swift */; };
+		6C47E015254CC75C005FA5A4 /* UITableView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E011254CC731005FA5A4 /* UITableView+Cell.swift */; };
+		6C47E016254CC75C005FA5A4 /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E012254CC731005FA5A4 /* UIViewController+Error.swift */; };
+		6C47E017254CC75C005FA5A4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E013254CC731005FA5A4 /* Observable.swift */; };
 		99301FE58C24F57A025D9754 /* Pods_SchipholAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +50,15 @@
 		6C47DFF2254CBD02005FA5A4 /* SchipholAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchipholAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchipholAppTests.swift; sourceTree = "<group>"; };
 		6C47DFF8254CBD02005FA5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C47E005254CC285005FA5A4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		6C47E006254CC285005FA5A4 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		6C47E009254CC5D8005FA5A4 /* AirportsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsTableController.swift; sourceTree = "<group>"; };
+		6C47E00B254CC70F005FA5A4 /* AirportTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableCell.swift; sourceTree = "<group>"; };
+		6C47E00C254CC70F005FA5A4 /* AirportTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportTableCell.xib; sourceTree = "<group>"; };
+		6C47E010254CC731005FA5A4 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		6C47E011254CC731005FA5A4 /* UITableView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Cell.swift"; sourceTree = "<group>"; };
+		6C47E012254CC731005FA5A4 /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
+		6C47E013254CC731005FA5A4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		78FF62FE65FCC31352CB5F3C /* Pods-SchipholAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholAppTests.release.xcconfig"; path = "Target Support Files/Pods-SchipholAppTests/Pods-SchipholAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AF1B316133B691E0407B636 /* Pods-SchipholApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholApp.release.xcconfig"; path = "Target Support Files/Pods-SchipholApp/Pods-SchipholApp.release.xcconfig"; sourceTree = "<group>"; };
 		8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchipholAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +150,9 @@
 		6C47E002254CBF3F005FA5A4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6C47E009254CC5D8005FA5A4 /* AirportsTableController.swift */,
+				6C47E00B254CC70F005FA5A4 /* AirportTableCell.swift */,
+				6C47E00C254CC70F005FA5A4 /* AirportTableCell.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -139,8 +160,30 @@
 		6C47E003254CBF47005FA5A4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C47E00F254CC731005FA5A4 /* Extensions */,
+				6C47E004254CC285005FA5A4 /* Navigation */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		6C47E004254CC285005FA5A4 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6C47E005254CC285005FA5A4 /* Destination.swift */,
+				6C47E006254CC285005FA5A4 /* Navigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		6C47E00F254CC731005FA5A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6C47E010254CC731005FA5A4 /* UIView+Layer.swift */,
+				6C47E011254CC731005FA5A4 /* UITableView+Cell.swift */,
+				6C47E012254CC731005FA5A4 /* UIViewController+Error.swift */,
+				6C47E013254CC731005FA5A4 /* Observable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9BC029B16F66EF34FA1B805C /* Pods */ = {
@@ -248,6 +291,7 @@
 			files = (
 				6C47DFEC254CBD02005FA5A4 /* LaunchScreen.storyboard in Resources */,
 				6C47DFE9254CBD02005FA5A4 /* Preview Assets.xcassets in Resources */,
+				6C47E00E254CC70F005FA5A4 /* AirportTableCell.xib in Resources */,
 				6C47DFE6254CBD02005FA5A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,8 +357,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C47E017254CC75C005FA5A4 /* Observable.swift in Sources */,
 				6C47DFE0254CBCF9005FA5A4 /* AppDelegate.swift in Sources */,
+				6C47E016254CC75C005FA5A4 /* UIViewController+Error.swift in Sources */,
+				6C47E00D254CC70F005FA5A4 /* AirportTableCell.swift in Sources */,
+				6C47E015254CC75C005FA5A4 /* UITableView+Cell.swift in Sources */,
+				6C47E008254CC2D1005FA5A4 /* Navigator.swift in Sources */,
 				6C47DFE2254CBCF9005FA5A4 /* SceneDelegate.swift in Sources */,
+				6C47E007254CC2D1005FA5A4 /* Destination.swift in Sources */,
+				6C47E00A254CC5D8005FA5A4 /* AirportsTableController.swift in Sources */,
+				6C47E014254CC75C005FA5A4 /* UIView+Layer.swift in Sources */,
 				6C47DFE4254CBCF9005FA5A4 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
