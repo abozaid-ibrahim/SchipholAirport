@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BE279CBDFF53DA7B72A1CF5 /* Pods_SchipholApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39CD86BEF159E7F93ECEC0E /* Pods_SchipholApp.framework */; };
 		6C47DFE0254CBCF9005FA5A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */; };
 		6C47DFE2254CBCF9005FA5A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */; };
 		6C47DFE4254CBCF9005FA5A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFE3254CBCF9005FA5A4 /* ContentView.swift */; };
@@ -14,6 +15,7 @@
 		6C47DFE9254CBD02005FA5A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFE8254CBD02005FA5A4 /* Preview Assets.xcassets */; };
 		6C47DFEC254CBD02005FA5A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */; };
 		6C47DFF7254CBD02005FA5A4 /* SchipholAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */; };
+		99301FE58C24F57A025D9754 /* Pods_SchipholAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65464BB1DFAEB56AB5780444 /* Pods-SchipholAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SchipholAppTests/Pods-SchipholAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C47DFDC254CBCF9005FA5A4 /* SchipholApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchipholApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		6C47DFF2254CBD02005FA5A4 /* SchipholAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchipholAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchipholAppTests.swift; sourceTree = "<group>"; };
 		6C47DFF8254CBD02005FA5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78FF62FE65FCC31352CB5F3C /* Pods-SchipholAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholAppTests.release.xcconfig"; path = "Target Support Files/Pods-SchipholAppTests/Pods-SchipholAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		7AF1B316133B691E0407B636 /* Pods-SchipholApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholApp.release.xcconfig"; path = "Target Support Files/Pods-SchipholApp/Pods-SchipholApp.release.xcconfig"; sourceTree = "<group>"; };
+		8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchipholAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD124B4BBAF1D6023FADCA4 /* Pods-SchipholApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholApp.debug.xcconfig"; path = "Target Support Files/Pods-SchipholApp/Pods-SchipholApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F39CD86BEF159E7F93ECEC0E /* Pods_SchipholApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchipholApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE279CBDFF53DA7B72A1CF5 /* Pods_SchipholApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99301FE58C24F57A025D9754 /* Pods_SchipholAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				6C47DFDE254CBCF9005FA5A4 /* SchipholApp */,
 				6C47DFF5254CBD02005FA5A4 /* SchipholAppTests */,
 				6C47DFDD254CBCF9005FA5A4 /* Products */,
+				9BC029B16F66EF34FA1B805C /* Pods */,
+				A27E416938598C556C677D7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +91,9 @@
 		6C47DFDE254CBCF9005FA5A4 /* SchipholApp */ = {
 			isa = PBXGroup;
 			children = (
-				6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */,
-				6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */,
-				6C47DFE3254CBCF9005FA5A4 /* ContentView.swift */,
-				6C47DFE5254CBD02005FA5A4 /* Assets.xcassets */,
-				6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */,
-				6C47DFED254CBD02005FA5A4 /* Info.plist */,
+				6C47E003254CBF47005FA5A4 /* Modules */,
+				6C47E002254CBF3F005FA5A4 /* Scenes */,
+				6C47E001254CBF37005FA5A4 /* SupportingFiles */,
 				6C47DFE7254CBD02005FA5A4 /* Preview Content */,
 			);
 			path = SchipholApp;
@@ -107,6 +116,53 @@
 			path = SchipholAppTests;
 			sourceTree = "<group>";
 		};
+		6C47E001254CBF37005FA5A4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */,
+				6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */,
+				6C47DFE3254CBCF9005FA5A4 /* ContentView.swift */,
+				6C47DFE5254CBD02005FA5A4 /* Assets.xcassets */,
+				6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */,
+				6C47DFED254CBD02005FA5A4 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		6C47E002254CBF3F005FA5A4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6C47E003254CBF47005FA5A4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9BC029B16F66EF34FA1B805C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFD124B4BBAF1D6023FADCA4 /* Pods-SchipholApp.debug.xcconfig */,
+				7AF1B316133B691E0407B636 /* Pods-SchipholApp.release.xcconfig */,
+				65464BB1DFAEB56AB5780444 /* Pods-SchipholAppTests.debug.xcconfig */,
+				78FF62FE65FCC31352CB5F3C /* Pods-SchipholAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A27E416938598C556C677D7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F39CD86BEF159E7F93ECEC0E /* Pods_SchipholApp.framework */,
+				8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C47DFFB254CBD02005FA5A4 /* Build configuration list for PBXNativeTarget "SchipholApp" */;
 			buildPhases = (
+				0C69578800DC117A299B2DF8 /* [CP] Check Pods Manifest.lock */,
 				6C47DFD8254CBCF9005FA5A4 /* Sources */,
 				6C47DFD9254CBCF9005FA5A4 /* Frameworks */,
 				6C47DFDA254CBCF9005FA5A4 /* Resources */,
@@ -131,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C47DFFE254CBD02005FA5A4 /* Build configuration list for PBXNativeTarget "SchipholAppTests" */;
 			buildPhases = (
+				5D455B8A3CE15A257D2B5759 /* [CP] Check Pods Manifest.lock */,
 				6C47DFEE254CBD02005FA5A4 /* Sources */,
 				6C47DFEF254CBD02005FA5A4 /* Frameworks */,
 				6C47DFF0254CBD02005FA5A4 /* Resources */,
@@ -202,6 +260,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C69578800DC117A299B2DF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchipholApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D455B8A3CE15A257D2B5759 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchipholAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C47DFD8254CBCF9005FA5A4 /* Sources */ = {
@@ -360,13 +465,14 @@
 		};
 		6C47DFFC254CBD02005FA5A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD124B4BBAF1D6023FADCA4 /* Pods-SchipholApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SchipholApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 475YN7ANSF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SchipholApp/Info.plist;
+				INFOPLIST_FILE = SchipholApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,13 +486,14 @@
 		};
 		6C47DFFD254CBD02005FA5A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AF1B316133B691E0407B636 /* Pods-SchipholApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SchipholApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 475YN7ANSF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SchipholApp/Info.plist;
+				INFOPLIST_FILE = SchipholApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,6 +507,7 @@
 		};
 		6C47DFFF254CBD02005FA5A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65464BB1DFAEB56AB5780444 /* Pods-SchipholAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -422,6 +530,7 @@
 		};
 		6C47E000254CBD02005FA5A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FF62FE65FCC31352CB5F3C /* Pods-SchipholAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
