@@ -15,7 +15,7 @@ protocol AirlineDataSource {
 final class LocalAirlinesLoader: AirlineDataSource {
     func loadAirports(compeletion: @escaping (Result<AirportsList, NetworkError>) -> Void) {
         do {
-            let response = try Bundle.main.decode(AirportsList.self, from: "AirlinesData.json")
+            let response = try Bundle.main.decode(AirportsList.self, from: "AirportsData.json")
             compeletion(.success(response))
         } catch {
             compeletion(.failure(.noData))

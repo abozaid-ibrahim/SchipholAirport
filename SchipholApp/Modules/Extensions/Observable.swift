@@ -27,10 +27,12 @@ public final class Observable<T> {
     }
 
     @discardableResult
-    func subscribe(_ observer: @escaping ((T) -> Void)) -> UUID {
+    func subscribe(on queue: DispatchQueue = .main, _ observer: @escaping ((T) -> Void)) -> UUID {
         let id = UUID()
         observers[id] = observer
-        observer(value)
+        queue.async {
+            observer(self.value)
+        }
         return id
     }
 

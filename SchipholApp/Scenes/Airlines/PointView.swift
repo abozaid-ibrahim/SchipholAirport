@@ -16,7 +16,8 @@ internal final class PointView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         clusteringIdentifier = String(describing: PointView.self)
         displayPriority = .defaultHigh
-//        image = UIImage(named: "service_point_map_pin", in: AirlinesViewController.bundle, compatibleWith: nil)
+        image = UIImage(named: "annotation", in: Bundle(for: PointView.self), compatibleWith: nil)
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -31,7 +32,7 @@ internal final class PointsClusterView: MKMarkerAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         displayPriority = .defaultHigh
-        markerTintColor = .red
+//        markerTintColor = .red
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -44,19 +45,12 @@ internal final class PointsClusterView: MKMarkerAnnotationView {
         guard let annotation = annotation as? MKClusterAnnotation else { return }
         canShowCallout = false
         glyphText = annotation.memberAnnotations.count.description
-        subtitleVisibility = .hidden
-        markerTintColor = .clear
-//        image = UIImage(named: "clusterPin", in: AirlinesViewController.bundle, compatibleWith: nil)
+//        subtitleVisibility = .hidden
+//        markerTintColor = .clear
+//        image = UIImage(named: "cluster", in: AirlinesViewController.bundle, compatibleWith: nil)
     }
 }
 
-// extension MKCoordinateRegion {
-//    init(region: LocationViewModel) {
-//        self.init(center: CLLocationCoordinate2D(location: region.location),
-//                  latitudinalMeters: region.latitudeMeters,
-//                  longitudinalMeters: region.longitudeMeters)
-//    }
-// }
 
 extension CLLocationCoordinate2D {
     init(from: Airport) {
