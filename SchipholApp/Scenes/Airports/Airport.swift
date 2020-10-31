@@ -10,7 +10,7 @@ import Foundation
 
 struct Airport: Codable {
     let id: String
-    let latitude, longitude: Double?
+    let latitude, longitude: Double
     let name: String?
     let city: String?
     let countryID: String?

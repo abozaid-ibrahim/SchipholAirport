@@ -16,7 +16,8 @@ enum Destination {
         switch self {
         case .mainTab:
             let tab = UITabBarController()
-            tab.setViewControllers([AirportsTableController(), AirportsTableController()], animated: true)
+
+            tab.setViewControllers([AirportsTableController(), AirlinesViewController()], animated: true)
             return tab
         case let .airportDetails(airport):
             return UIViewController()

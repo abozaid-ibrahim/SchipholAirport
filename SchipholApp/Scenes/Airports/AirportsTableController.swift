@@ -24,6 +24,7 @@ final class AirportsTableController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = ActivityIndicatorFooterView()
         tableView.register(AirportTableCell.self)
         bindToViewModel()
         viewModel.loadData()
@@ -47,17 +48,20 @@ extension AirportsTableController {
 // MARK: - Private
 
 private extension AirportsTableController {
+    var indicator: ActivityIndicatorFooterView? {
+           return tableView.tableFooterView as? ActivityIndicatorFooterView
+       }
     func bindToViewModel() {
         viewModel.reloadData.subscribe { [weak self] reload in
             DispatchQueue.main.async { if reload { self?.tableView.reloadData() } }
         }
-        viewModel.isLoading.subscribe { [weak self] _ in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-//                    let size: CGSize = isLoading ? self.collectionView.bounds.size : .zero
-//                    self.collectionView.updateFooter(size: size)
-            }
-        }
+         viewModel.isLoading.subscribe { [weak self] isLoading in
+                   guard let self = self else { return }
+                   DispatchQueue.main.async {
+                       self.tableView.sectionFooterHeight = isLoading ? 80 : 0
+                       self.indicator?.set(isLoading: isLoading)
+                   }
+               }
         viewModel.error.subscribe { [weak self] error in
             guard let self = self, let msg = error else { return }
             DispatchQueue.main.async { self.show(error: msg) }

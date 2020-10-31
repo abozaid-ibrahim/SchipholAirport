@@ -8,23 +8,23 @@
 
 import Foundation
 
-protocol AirportsViewModelType {
-    var reloadData: Observable<Bool> { get }
+protocol AirlinesViewModelType {
+    var reloadData: Observable< [Airport]> { get }
     var error: Observable<String?> { get }
     var isLoading: Observable<Bool> { get }
-    var dataList: [Airport] { get }
+    var dataList: [Airline] { get }
     func loadData()
 }
 
-final class AirportsViewModel: AirportsViewModelType {
-    private let dataLoader: AirportsDataSource
+final class AirlinesViewModel: AirlinesViewModelType {
+    private let dataLoader: AirlineDataSource
     private let days: Int = 5
-    let reloadData: Observable<Bool> = .init(false)
+    let reloadData: Observable< [Airport]> = .init([])
     let isLoading: Observable<Bool> = .init(false)
     let error: Observable<String?> = .init(nil)
-    private(set) var dataList: [Airport] = []
+    private(set) var dataList: [Airline] = []
 
-    init(loader: AirportsDataSource = LocalAirportsLoader()) {
+    init(loader: AirlineDataSource = LocalAirlinesLoader()) {
         dataLoader = loader
     }
 
@@ -34,8 +34,8 @@ final class AirportsViewModel: AirportsViewModelType {
             guard let self = self else { return }
             switch data {
             case let .success(response):
-                self.dataList = response
-                self.reloadData.next(true)
+//                self.dataList = response
+                self.reloadData.next(response)
             case let .failure(error):
                 self.error.next(error.localizedDescription)
             }
