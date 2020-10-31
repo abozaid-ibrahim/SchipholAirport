@@ -21,7 +21,7 @@ final class ActivityIndicatorFooterView: UIView {
         fatalError("Unsupported")
     }
 
-    static var id: String {
+    static var identifier: String {
         return String(describing: self)
     }
 
@@ -41,7 +41,6 @@ final class ActivityIndicatorFooterView: UIView {
         activityView.translatesAutoresizingMaskIntoConstraints = false
         addConstraints([
             activityView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            activityView.centerXAnchor.constraint(equalTo: centerXAnchor),
-        ])
+            activityView.centerXAnchor.constraint(equalTo: centerXAnchor)])
     }
 }

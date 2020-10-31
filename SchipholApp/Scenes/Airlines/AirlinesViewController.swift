@@ -12,12 +12,7 @@ import UIKit
 final class AirlinesViewController: UIViewController {
     private let userLocationDistanceMeters: CLLocationDistance = 5000
     private let locationManager = LocationManager()
-
-    lazy var mapView: MKMapView = {
-        let map = MKMapView()
-        map.delegate = self
-        return map
-    }()
+    private let mapView = MKMapView()
 
     private let viewModel: AirlinesViewModelType
     init(with viewModel: AirlinesViewModelType = AirlinesViewModel()) {
@@ -46,18 +41,18 @@ final class AirlinesViewController: UIViewController {
 
 extension AirlinesViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard !(annotation is MKUserLocation) else { return nil }
-
-        var annotationView: MKAnnotationView?
-
-        if let annotation = annotation as? MKClusterAnnotation {
-            annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier, for: annotation)
-        } else if let annotation = annotation as? PointAnnotation {
-            annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier, for: annotation)
-            annotationView?.clusteringIdentifier = String(describing: PointView.self)
+        switch annotation {
+        case is PointAnnotation:
+            let view = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier,
+                                                             for: annotation)
+            view.clusteringIdentifier = String(describing: PointView.self)
+            return view
+        case is MKClusterAnnotation:
+            return mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier,
+                                                         for: annotation)
+        default:
+            return nil
         }
-
-        return annotationView
     }
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -73,8 +68,10 @@ private extension AirlinesViewController {
     func setup() {
         view.addSubview(mapView)
         mapView.setConstrainsEqualToParentEdges()
-        mapView.register(PointView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        mapView.register(PointsClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+        mapView.delegate = self
+        mapView.register(PointView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+//        mapView.register(PointsClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
 
     func binding() {

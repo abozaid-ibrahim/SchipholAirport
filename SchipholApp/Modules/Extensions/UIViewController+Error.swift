@@ -17,8 +17,9 @@ public extension UIViewController {
     }
 
     func show(title: String? = nil, error: String?, actions: [AlertAction] = []) {
+        let msg = "To determine the location, enable 'Location Services' in the settings of your phone."
         let alertController = UIAlertController(title: title,
-                                                message: "To determine the location, enable 'Location Services' in the settings of your phone.",
+                                                message: msg,
                                                 preferredStyle: .alert)
 
         for action in actions {
