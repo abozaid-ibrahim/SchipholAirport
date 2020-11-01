@@ -10,7 +10,7 @@ import MapKit
 import UIKit
 
 final class AirlinesViewController: UIViewController {
-    private let userLocationDistanceMeters: CLLocationDistance = 5000
+    private let userLocationDistanceMeters: CLLocationDistance = 5000000
     private let locationManager = LocationManager()
     private let mapView = MKMapView()
 
@@ -57,7 +57,7 @@ extension AirlinesViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation as? PointAnnotation else { return }
-        AppNavigator.shared.push(.airportDetails(of: annotation.airport))
+        AppNavigator.shared.push(.airportDetails(annotation.airport))
         mapView.deselectAnnotation(annotation, animated: false)
     }
 }

@@ -10,17 +10,18 @@ import UIKit
 
 final class AppNavigator {
     static let shared = AppNavigator()
-    private static var homeNavigationController: UINavigationController!
+    private static var navigator: UINavigationController!
 
     private init() {}
 
     func set(window: UIWindow) {
-        AppNavigator.homeNavigationController = UINavigationController(rootViewController: Destination.mainTab.controller)
-        window.rootViewController = AppNavigator.homeNavigationController
+        AppNavigator.navigator = UINavigationController(rootViewController: Destination.mainTab.controller)
+        AppNavigator.navigator.setNavigationBarHidden(true, animated: true)
+        window.rootViewController = AppNavigator.navigator
         window.makeKeyAndVisible()
     }
 
     func push(_ dest: Destination) {
-        AppNavigator.homeNavigationController.pushViewController(dest.controller, animated: true)
+        AppNavigator.navigator.pushViewController(dest.controller, animated: true)
     }
 }

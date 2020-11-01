@@ -17,28 +17,59 @@ protocol AirportsViewModelType {
 }
 
 final class AirportsViewModel: AirportsViewModelType {
-    private let dataLoader: AirportsDataSource
+    private let airportsLoader: AirportsDataSource
+    private let flightsLoader: FlightsDataSource
     private let days: Int = 5
     let reloadData: Observable<Bool> = .init(false)
     let isLoading: Observable<Bool> = .init(false)
     let error: Observable<String?> = .init(nil)
     private(set) var dataList: [Airport] = []
 
-    init(loader: AirportsDataSource = LocalAirportsLoader()) {
-        dataLoader = loader
+    init(airportsLoader: AirportsDataSource = LocalAirportsLoader(),
+         flightsLoader: FlightsDataSource = FlightsLocalLoader()) {
+        self.airportsLoader = airportsLoader
+        self.flightsLoader = flightsLoader
     }
 
     func loadData() {
+        let dispatchGroup = DispatchGroup()
+        var airports: AirportsList = []
+        var flights: [String: String] = [:]
         isLoading.next(true)
-        dataLoader.loadAirports { [weak self] data in
+        dispatchGroup.enter()
+        airportsLoader.loadAirports { [weak self] data in
             guard let self = self else { return }
             switch data {
             case let .success(response):
-                self.dataList = response
-                self.reloadData.next(true)
+                airports = response
             case let .failure(error):
                 self.error.next(error.localizedDescription)
             }
+            self.isLoading.next(false)
+            dispatchGroup.leave()
+        }
+        dispatchGroup.enter()
+
+        flightsLoader.loadFlights { [weak self] data in
+            guard let self = self else { return }
+            switch data {
+            case let .success(response):
+                for flight in response {
+                    flights[flight.arrivalAirportID] = flight.departureAirportID
+                }
+            case let .failure(error):
+                self.error.next(error.localizedDescription)
+            }
+
+            dispatchGroup.leave()
+        }
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            let sources = airports.filter { flights[$0.id] == Airport.mainAirport.id }
+                .sorted(by: {
+                    $0.distance(to: Airport.mainAirport) < $1.distance(to: Airport.mainAirport)
+                })
+            self.dataList = sources
+            self.reloadData.next(true)
             self.isLoading.next(false)
         }
     }

@@ -21,5 +21,5 @@ struct Flight: Codable {
         case arrivalAirportID = "arrivalAirportId"
     }
 }
-
+typealias FlightsList = [Flight]
 

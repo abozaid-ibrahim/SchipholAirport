@@ -25,7 +25,7 @@ final class AirportsTableController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = ActivityIndicatorFooterView()
-        tableView.register(AirportTableCell.self)
+        tableView.register(AirportTableCell.self, forCellReuseIdentifier: AirportTableCell.identifier)
         bindToViewModel()
         viewModel.loadData()
     }
@@ -42,6 +42,10 @@ extension AirportsTableController {
         let cell = tableView.dequeue(cell: AirportTableCell.self, for: indexPath)
         cell.setData(for: dataList[indexPath.row])
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppNavigator.shared.push(.airportDetails(dataList[indexPath.row]))
     }
 }
 

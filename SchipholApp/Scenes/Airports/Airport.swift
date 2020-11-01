@@ -24,4 +24,18 @@ struct Airport: Codable {
     }
 }
 
-typealias AirportsResponse = [Airport]
+import CoreLocation
+extension Airport {
+    func distance(to airport: Airport) -> Double {
+        let fromCoordinate = CLLocation(latitude: latitude, longitude: longitude)
+        let toCoordinate = CLLocation(latitude: airport.latitude, longitude: airport.latitude)
+        return toCoordinate.distance(from: fromCoordinate)
+    }
+
+    static var mainAirport = Airport(id: "AMS",
+                                     latitude: 52.30907,
+                                     longitude: 4.763385,
+                                     name: "Amsterdam-Schiphol Airport",
+                                     city: "Amsterdam",
+                                     countryID: "NL")
+}
