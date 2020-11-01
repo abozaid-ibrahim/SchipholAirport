@@ -19,13 +19,12 @@ protocol AirportsViewModelType {
 final class AirportsViewModel: AirportsViewModelType {
     private let airportsLoader: AirportsDataSource
     private let flightsLoader: FlightsDataSource
-    private let days: Int = 5
     let reloadData: Observable<Bool> = .init(false)
     let isLoading: Observable<Bool> = .init(false)
     let error: Observable<String?> = .init(nil)
     private(set) var dataList: [Airport] = []
 
-    init(airportsLoader: AirportsDataSource = LocalAirportsLoader(),
+    init(airportsLoader: AirportsDataSource = AirportsLocalLoader(),
          flightsLoader: FlightsDataSource = FlightsLocalLoader()) {
         self.airportsLoader = airportsLoader
         self.flightsLoader = flightsLoader
@@ -64,9 +63,9 @@ final class AirportsViewModel: AirportsViewModelType {
             dispatchGroup.leave()
         }
         dispatchGroup.notify(queue: DispatchQueue.main) {
-            let sources = airports.filter { flights[$0.id] == Airport.mainAirport.id }
+            let sources = airports.filter { flights[$0.id] == Airport.schipholAirport.id }
                 .sorted(by: {
-                    $0.distance(to: Airport.mainAirport) < $1.distance(to: Airport.mainAirport)
+                    $0.distance(to: Airport.schipholAirport) < $1.distance(to: Airport.schipholAirport)
                 })
             self.dataList = sources
             self.reloadData.next(true)

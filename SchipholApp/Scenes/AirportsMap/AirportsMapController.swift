@@ -1,5 +1,5 @@
 //
-//  AirlinesViewController.swift
+//  AirportsMapController.swift
 //  SchipholApp
 //
 //  Created by abuzeid on 31.10.20.
@@ -9,15 +9,15 @@
 import MapKit
 import UIKit
 
-final class AirlinesViewController: UIViewController {
+final class AirportsMapController: UIViewController {
     private let userLocationDistanceMeters: CLLocationDistance = 5000000
     private let locationManager = LocationManager()
     private let mapView = MKMapView()
 
-    private let viewModel: AirlinesViewModelType
-    init(with viewModel: AirlinesViewModelType = AirlinesViewModel()) {
+    private let viewModel: AirportsMapViewModelType
+    init(with viewModel: AirportsMapViewModelType = AirportsMapViewModel()) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: Bundle(for: AirlinesViewController.self))
+        super.init(nibName: nil, bundle: nil)
     }
 
     @available(*, unavailable)
@@ -39,7 +39,7 @@ final class AirlinesViewController: UIViewController {
     }
 }
 
-extension AirlinesViewController: MKMapViewDelegate {
+extension AirportsMapController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         switch annotation {
         case is PointAnnotation:
@@ -64,7 +64,7 @@ extension AirlinesViewController: MKMapViewDelegate {
 
 // MARK: location manager
 
-private extension AirlinesViewController {
+private extension AirportsMapController {
     func setup() {
         view.addSubview(mapView)
         mapView.setConstrainsEqualToParentEdges()

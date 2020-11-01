@@ -13,12 +13,14 @@ enum Destination {
     case mainTab
     case map(withTabItem: Bool)
     case airports(withTabItem: Bool)
+    case airlines(withTabItem: Bool)
     case airportDetails(Airport)
     var controller: UIViewController {
         switch self {
         case .mainTab:
             let tab = UITabBarController()
             tab.setViewControllers([
+                 Destination.airlines(withTabItem: true).controller,
                 Destination.airports(withTabItem: true).controller,
                 Destination.map(withTabItem: true).controller],
             animated: true)
@@ -30,7 +32,7 @@ enum Destination {
             return controller
         case let .map(haveTab):
 
-            let mapvc = AirlinesViewController()
+            let mapvc = AirportsMapController()
             if haveTab {
                 let mapItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
                 mapvc.tabBarItem = mapItem
@@ -43,6 +45,14 @@ enum Destination {
                 airports.tabBarItem = tabBarItem
             }
             return airports
+
+        case let .airlines(haveTab):
+            let airline = AirlinesTableController()
+            if haveTab {
+                let tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+                airline.tabBarItem = tabBarItem
+            }
+            return airline
         }
     }
 }

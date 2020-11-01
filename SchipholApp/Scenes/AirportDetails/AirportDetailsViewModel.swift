@@ -17,7 +17,7 @@ final class AirportDetailsViewModel {
     }
 
     var nearestAirport: String {
-        let distanceInMeters = Airport.mainAirport.distance(to: airport)
+        let distanceInMeters = Airport.schipholAirport.distance(to: airport)
         return formatted(distance: distanceInMeters)
     }
 
@@ -37,6 +37,4 @@ extension Airport {
     var address: String {
         "\(city ?? ""), \(countryID ?? "")"
     }
-
-   
 }

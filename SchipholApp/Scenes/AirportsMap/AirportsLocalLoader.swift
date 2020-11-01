@@ -1,5 +1,5 @@
 //
-//  AirlineDataSource.swift
+//  LocalAirportsLoader.swift
 //  SchipholApp
 //
 //  Created by abuzeid on 30.10.20.
@@ -7,12 +7,12 @@
 //
 
 import Foundation
-typealias AirportsList = [Airport]
-protocol AirlineDataSource {
+
+protocol AirportsDataSource {
     func loadAirports(compeletion: @escaping (Result<AirportsList, NetworkError>) -> Void)
 }
 
-final class LocalAirlinesLoader: AirlineDataSource {
+final class AirportsLocalLoader: AirportsDataSource {
     func loadAirports(compeletion: @escaping (Result<AirportsList, NetworkError>) -> Void) {
         do {
             let response = try Bundle.main.decode(AirportsList.self, from: "AirportsData.json")

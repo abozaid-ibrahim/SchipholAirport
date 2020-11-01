@@ -11,4 +11,5 @@ import Foundation
 struct Airline: Codable {
     let id: String
     let name: String?
+    var totalDistance: Double?
 }

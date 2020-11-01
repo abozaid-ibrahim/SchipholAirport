@@ -32,7 +32,7 @@ extension Airport {
         return toCoordinate.distance(from: fromCoordinate)
     }
 
-    static var mainAirport = Airport(id: "AMS",
+    static var schipholAirport = Airport(id: "AMS",
                                      latitude: 52.30907,
                                      longitude: 4.763385,
                                      name: "Amsterdam-Schiphol Airport",
