@@ -20,7 +20,7 @@ enum Destination {
         case .mainTab:
             let tab = UITabBarController()
             tab.setViewControllers([
-                 Destination.airlines(withTabItem: true).controller,
+                Destination.airlines(withTabItem: true).controller,
                 Destination.airports(withTabItem: true).controller,
                 Destination.map(withTabItem: true).controller],
             animated: true)
@@ -31,27 +31,17 @@ enum Destination {
             let controller = AirportDetailsController(with: viewModel)
             return controller
         case let .map(haveTab):
-
             let mapvc = AirportsMapController()
-            if haveTab {
-                let mapItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
-                mapvc.tabBarItem = mapItem
-            }
+            mapvc.tabBarItem = haveTab ? UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "map"), tag: 0) : nil
             return mapvc
         case let .airports(haveTab):
             let airports = AirportsTableController()
-            if haveTab {
-                let tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-                airports.tabBarItem = tabBarItem
-            }
+            airports.tabBarItem = haveTab ? UITabBarItem(title: "Airports", image: #imageLiteral(resourceName: "plane"), tag: 0) : nil
             return airports
 
         case let .airlines(haveTab):
             let airline = AirlinesTableController()
-            if haveTab {
-                let tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-                airline.tabBarItem = tabBarItem
-            }
+            airline.tabBarItem = haveTab ? UITabBarItem(title: "Airlines", image: #imageLiteral(resourceName: "list"), tag: 0) : nil
             return airline
         }
     }

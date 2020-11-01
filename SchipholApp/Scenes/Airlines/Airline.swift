@@ -13,3 +13,9 @@ struct Airline: Codable {
     let name: String?
     var totalDistance: Double?
 }
+
+extension Airline {
+    var distance: String {
+        (totalDistance ?? 0).formatted
+    }
+}

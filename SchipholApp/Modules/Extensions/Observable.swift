@@ -12,9 +12,14 @@ import Foundation
 /// and  everything that  is  emitted  by that  sequence after the  subscription  happened.
 public final class Observable<T> {
     private var observers = [UUID: (T) -> Void]()
+    private var queues = [UUID: DispatchQueue]()
     private var _value: T {
         didSet {
-            observers.values.forEach { $0(_value) }
+            for (key, value) in observers {
+                queues[key]?.async {
+                    value(self._value)
+                }
+            }
         }
     }
 
@@ -30,14 +35,15 @@ public final class Observable<T> {
     func subscribe(on queue: DispatchQueue = .main, _ observer: @escaping ((T) -> Void)) -> UUID {
         let id = UUID()
         observers[id] = observer
-        queue.async {
-            observer(self.value)
-        }
+        queues[id] = queue
+        observer(value)
+
         return id
     }
 
     func unsubscribe(id: UUID) {
         observers.removeValue(forKey: id)
+        queues.removeValue(forKey: id)
     }
 
     func next(_ newValue: T) {

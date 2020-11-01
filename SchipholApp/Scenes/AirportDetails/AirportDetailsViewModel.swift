@@ -17,24 +17,25 @@ final class AirportDetailsViewModel {
     }
 
     var nearestAirport: String {
-        let distanceInMeters = Airport.schipholAirport.distance(to: airport)
-        return formatted(distance: distanceInMeters)
-    }
-
-    private func formatted(distance: CLLocationDistance) -> String {
-        let lengthFormatter = LengthFormatter()
-        lengthFormatter.numberFormatter.maximumFractionDigits = 1
-
-        if NSLocale.current.usesMetricSystem {
-            return lengthFormatter.string(fromValue: distance / 1000, unit: .kilometer)
-        } else {
-            return lengthFormatter.string(fromValue: distance / 1609.34, unit: .mile)
-        }
+        return Airport.schipholAirport.distance(to: airport).formatted
     }
 }
 
 extension Airport {
     var address: String {
         "\(city ?? ""), \(countryID ?? "")"
+    }
+}
+
+extension CLLocationDistance {
+    var formatted: String {
+        let lengthFormatter = LengthFormatter()
+        lengthFormatter.numberFormatter.maximumFractionDigits = 1
+
+        if NSLocale.current.usesMetricSystem {
+            return lengthFormatter.string(fromValue: self / 1000, unit: .kilometer)
+        } else {
+            return lengthFormatter.string(fromValue: self / 1609.34, unit: .mile)
+        }
     }
 }

@@ -10,6 +10,6 @@ import Foundation
 extension AirportTableCell {
     func setData(for airline: Airline) {
         nameLabel.text = airline.name
-        cityLabel.text = String(airline.totalDistance ?? 0)
+        cityLabel.text = airline.distance
     }
 }
