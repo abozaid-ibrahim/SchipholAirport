@@ -46,13 +46,13 @@ final class AirportDetailsViewModel: AirportDetailsViewModelType {
         var minDistance = Double.infinity
         for value in airports {
             let dest = airport.distance(to: value)
-            if dest < minDistance {
+            if dest < minDistance, dest > 0 {
                 nearest = value
                 minDistance = dest
             }
         }
         guard let airport = nearest else { return }
-        let text = "\(airport.name)\n\(airport.address)\n\(minDistance)"
+        let text = "\(airport.name)\n\(airport.address)\n\(minDistance.formatted)"
 
         nearestAirport.next(text)
     }

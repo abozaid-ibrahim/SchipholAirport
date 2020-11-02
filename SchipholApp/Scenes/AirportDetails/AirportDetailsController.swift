@@ -25,7 +25,8 @@ final class AirportDetailsController: UIViewController {
 
     lazy var mainStack: UIStackView = {
         let stack = UIStackView()
-        stack.alignment = .top
+        stack.alignment = .fill
+        stack.distribution = .fill
         stack.spacing = 8
         stack.axis = .vertical
         return stack
@@ -54,6 +55,14 @@ final class AirportDetailsController: UIViewController {
         label.font = .seconderyFont
         label.text = airport.address
         return label
+    }()
+
+    lazy var sperator: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        return view
     }()
 
     lazy var nearstAirportPlaceholder: UILabel = {
@@ -101,16 +110,18 @@ private extension AirportDetailsController {
             view.backgroundColor = .white
         }
         view.addSubview(mainStack)
-        mainStack.setConstrainsEqualToSafeArea(edge: [.top, .trailing, .leading], with: 12)
+        mainStack.setConstrainsEqualToSafeArea(edge: [.trailing, .leading], with: 12)
+        mainStack.setConstrainsEqualToSafeArea(edge: [.top], with: 24)
         mainStack.addArrangedSubview(nameLabel)
         mainStack.addArrangedSubview(addressLabel)
         mainStack.addArrangedSubview(locationLabel)
+        mainStack.addArrangedSubview(sperator)
         mainStack.addArrangedSubview(nearstAirportPlaceholder)
         mainStack.addArrangedSubview(nearstAirportLabel)
     }
 }
 
 extension UIFont {
-    static var titleFont: UIFont { UIFont.systemFont(ofSize: 20) }
+    static var titleFont: UIFont { UIFont.boldSystemFont(ofSize: 18) }
     static var seconderyFont: UIFont { UIFont.systemFont(ofSize: 16) }
 }
