@@ -36,6 +36,7 @@ enum Destination {
         case let .airports(haveTab):
             let airports = AirportsTableController()
             airports.tabBarItem = haveTab ? UITabBarItem(title: Str.airports, image: #imageLiteral(resourceName: "plane"), tag: 0) : nil
+            airports.tabBarItem.accessibilityIdentifier = AccessibilityId.airportsTab
             return airports
 
         case let .airlines(haveTab):

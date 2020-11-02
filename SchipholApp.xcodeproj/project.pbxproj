@@ -51,6 +51,8 @@
 		6CA26188254E0176000B5DEE /* AirportDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26187254E0176000B5DEE /* AirportDetailsViewModel.swift */; };
 		6CA2618A254F43EE000B5DEE /* FlightsLocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26189254F43EE000B5DEE /* FlightsLocalLoader.swift */; };
 		6CA26190254F5227000B5DEE /* AirlinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA2618F254F5226000B5DEE /* AirlinesViewModel.swift */; };
+		6CF6CE6B2550666900677ECB /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6CE6A2550666900677ECB /* AccessibilityIdentifiers.swift */; };
+		6CF6CE6D2550672900677ECB /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6CE6A2550666900677ECB /* AccessibilityIdentifiers.swift */; };
 		99301FE58C24F57A025D9754 /* Pods_SchipholAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,7 @@
 		6CA26187254E0176000B5DEE /* AirportDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewModel.swift; sourceTree = "<group>"; };
 		6CA26189254F43EE000B5DEE /* FlightsLocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLocalLoader.swift; sourceTree = "<group>"; };
 		6CA2618F254F5226000B5DEE /* AirlinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesViewModel.swift; sourceTree = "<group>"; };
+		6CF6CE6A2550666900677ECB /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		78FF62FE65FCC31352CB5F3C /* Pods-SchipholAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholAppTests.release.xcconfig"; path = "Target Support Files/Pods-SchipholAppTests/Pods-SchipholAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AF1B316133B691E0407B636 /* Pods-SchipholApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchipholApp.release.xcconfig"; path = "Target Support Files/Pods-SchipholApp/Pods-SchipholApp.release.xcconfig"; sourceTree = "<group>"; };
 		8A412C6C5E6F9F65F48D95CF /* Pods_SchipholAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchipholAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +221,7 @@
 				6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */,
 				6C47DFED254CBD02005FA5A4 /* Info.plist */,
 				6C9BF6B625502F6D0080BFC3 /* Localizable.strings */,
+				6CF6CE6A2550666900677ECB /* AccessibilityIdentifiers.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -575,6 +579,7 @@
 				6C47E035254CD1E3005FA5A4 /* ActivityIndicatorFooter.swift in Sources */,
 				6C47DFE2254CBCF9005FA5A4 /* SceneDelegate.swift in Sources */,
 				6C47E007254CC2D1005FA5A4 /* Destination.swift in Sources */,
+				6CF6CE6B2550666900677ECB /* AccessibilityIdentifiers.swift in Sources */,
 				6C47E00A254CC5D8005FA5A4 /* AirportsTableController.swift in Sources */,
 				6C47E02B254CCC25005FA5A4 /* Data+Codable.swift in Sources */,
 				6C47E01F254CCA58005FA5A4 /* Airport.swift in Sources */,
@@ -599,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C9BF6C7255036130080BFC3 /* SchipholAppUITests.swift in Sources */,
+				6CF6CE6D2550672900677ECB /* AccessibilityIdentifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

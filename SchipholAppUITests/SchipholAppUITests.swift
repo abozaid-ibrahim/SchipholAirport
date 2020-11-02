@@ -6,18 +6,19 @@
 //  Copyright © 2020 abuzeid. All rights reserved.
 //
 
-@testable import SchipholApp
 import XCTest
 
 final class SchipholAppUITests: XCTestCase {
     func testNavigationToDetailsScreenProperly() throws {
         let app = XCUIApplication()
         app.launch()
-        app.tabBars.buttons["Airports"].tap()
-        let cellNameText = app.tables.cells.firstMatch.staticTexts.element(matching: .any, identifier: "nameLabel").label
+        app.tabBars.buttons[AccessibilityId.airportsTab].tap()
+        let cellNameText = app.tables.cells.firstMatch.staticTexts
+            .element(matching: .any, identifier: AccessibilityId.cellNameLabel).label
         app.tables.cells.firstMatch.tap()
-        XCTAssert(app.staticTexts["airportNameLabel"].exists)
-        let detailsNameText = app.staticTexts.element(matching: .any, identifier: "airportNameLabel").label
+        XCTAssert(app.staticTexts[AccessibilityId.airportNameLabel].exists)
+        let detailsNameText = app.staticTexts
+            .element(matching: .any, identifier: AccessibilityId.airportNameLabel).label
         XCTAssertEqual(cellNameText, detailsNameText)
     }
 

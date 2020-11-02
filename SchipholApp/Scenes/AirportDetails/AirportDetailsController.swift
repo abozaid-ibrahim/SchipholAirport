@@ -34,7 +34,7 @@ final class AirportDetailsController: UIViewController {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .titleFont
-        label.accessibilityIdentifier = AccessibilityIdentifiers.airportNameLabel.rawValue
+        label.accessibilityIdentifier = AccessibilityId.airportNameLabel
         label.text = airport.name
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -89,10 +89,6 @@ final class AirportDetailsController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-
-    enum AccessibilityIdentifiers: String {
-        case airportNameLabel
     }
 }
 
