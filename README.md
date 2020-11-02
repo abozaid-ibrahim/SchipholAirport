@@ -56,11 +56,11 @@ This application uses the Model-View-ViewModel (refered to as MVVM) UI architect
 
 #### screen shots:
 
-![Airelines (dark) scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/airlines_dark.png?raw=true)
-![Airports (dark) scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/airports_dark.png?raw=true)
-![Map (dark) scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/map_dark.png?raw=true)
-![Details (dark) scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/details_dark.png?raw=true)
+![Airelines (dark) scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/airlines_dark.png?raw=true)
+![Airports (dark) scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/airports_dark.png?raw=true)
+![Map (dark) scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/map_dark.png?raw=true)
+![Details (dark) scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/details_dark.png?raw=true)
 
-![Airports scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/airlines_light.png?raw=true)
-![Map scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/map_light.png?raw=true)
-![Details scene](https://github.com/abuzeid-ibrahim/SchipholApp/blob/master/SchipholApp/Screenshots/details_light.png?raw=true)
+![Airports scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/airports_light.png?raw=true)
+![Map scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/map_light.png?raw=true)
+![Details scene](https://github.com/abuzeid-ibrahim/SchipholAirport/blob/master/SchipholApp/Screenshots/details_light.png?raw=true)
