@@ -10,8 +10,6 @@ import MapKit
 import UIKit
 
 final class AirportsMapController: UIViewController {
-    private let userLocationDistanceMeters: CLLocationDistance = 5000000
-    private let locationManager = LocationManager()
     private let mapView = MKMapView()
 
     private let viewModel: AirportsMapViewModelType
@@ -30,12 +28,6 @@ final class AirportsMapController: UIViewController {
         setup()
         binding()
         viewModel.loadData()
-        locationManager.getCurrentLocation()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        locationManager.stopTracking()
-        super.viewWillDisappear(animated)
     }
 }
 
@@ -82,18 +74,6 @@ private extension AirportsMapController {
         viewModel.error.subscribe { [weak self] error in
             guard let self = self, let msg = error else { return }
             self.show(error: msg)
-        }
-        locationManager.error.subscribe { [weak self] error in
-            guard let self = self, let error = error else { return }
-            self.show(error: error.message, actions: error.actions)
-        }
-        locationManager.location.subscribe { [weak self] location in
-            guard let self = self,
-                let loc = location else { return }
-            self.mapView.setRegion(.init(center: loc.coordinate,
-                                         latitudinalMeters: self.userLocationDistanceMeters,
-                                         longitudinalMeters: self.userLocationDistanceMeters),
-                                   animated: true)
         }
     }
 }

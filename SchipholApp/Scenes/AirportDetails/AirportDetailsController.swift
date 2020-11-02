@@ -18,7 +18,7 @@ final class AirportDetailsController: UIViewController {
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("Unsupported")
     }
 
     private var airport: Airport { viewModel.airport }
@@ -94,7 +94,7 @@ final class AirportDetailsController: UIViewController {
 
 private extension AirportDetailsController {
     func setup() {
-        title = airport.name
+        title = airport.id
         if #available(iOS 13.0, *) {
             view.backgroundColor = .systemGray6
         } else {

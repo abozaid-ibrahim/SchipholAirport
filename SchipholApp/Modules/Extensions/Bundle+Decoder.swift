@@ -1,8 +1,8 @@
 //
 //  Bundle+Decoder.swift
-//  WeatherApp
+//  SchipholApp
 //
-//  Created by abuzeid on 30.09.20.
+//  Created by abuzeid on 31.10.20.
 //  Copyright © 2020 abuzeid. All rights reserved.
 //
 
@@ -19,7 +19,6 @@ public extension Bundle {
         }
         do {
             let decoder = JSONDecoder()
-//            decoder.dateDecodingStrategy = .formatted(DateFormatter.defaultJsonFormatter)
             return try decoder.decode(T.self, from: data)
         } catch {
             log(error, level: .error)

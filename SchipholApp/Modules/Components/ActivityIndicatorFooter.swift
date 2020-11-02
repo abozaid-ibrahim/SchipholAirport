@@ -1,8 +1,8 @@
 //
 //  ActivityIndicatorFooter.swift
-//  ContactList
+//  SchipholApp
 //
-//  Created by abuzeid on 01.10.20.
+//  Created by abuzeid on 31.10.20.
 //  Copyright © 2020 abuzeid. All rights reserved.
 //
 

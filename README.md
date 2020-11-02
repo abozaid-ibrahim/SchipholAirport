@@ -3,7 +3,7 @@
 ## Building And Running The Project (Requirements)
 * Swift 5.0+
 * Xcode 11.5+
-* iOS 13.0+
+* iOS 11.0+
 
 # Getting Started
 - If this is your first time encountering swift/ios development, please follow [the instructions](https://developer.apple.com/support/xcode/) to setup Xcode and Swift on your Mac.
@@ -46,6 +46,13 @@ This application uses the Model-View-ViewModel (refered to as MVVM) UI architect
 
 ### Scenes
 - Group of app scenes.
+
+### Points to improve:
+- improve code coverage
+- revisit the UI
+- change langauge switcher button.
+- Highlight the two airports on the map that are the furthest away from each other
+- meter / mile button switcher.
 
 #### screen shots:
 
