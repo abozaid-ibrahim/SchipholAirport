@@ -44,6 +44,8 @@
 		6C47E031254CCD16005FA5A4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E030254CCD16005FA5A4 /* Logger.swift */; };
 		6C47E033254CCD3F005FA5A4 /* AirportsLocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E032254CCD3F005FA5A4 /* AirportsLocalLoader.swift */; };
 		6C47E035254CD1E3005FA5A4 /* ActivityIndicatorFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E034254CD1E3005FA5A4 /* ActivityIndicatorFooter.swift */; };
+		6C9BF6B325502CA70080BFC3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9BF6B225502CA70080BFC3 /* Strings.swift */; };
+		6C9BF6B425502F6D0080BFC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C9BF6B625502F6D0080BFC3 /* Localizable.strings */; };
 		6CA26186254DFA70000B5DEE /* AirportDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26185254DFA70000B5DEE /* AirportDetailsController.swift */; };
 		6CA26188254E0176000B5DEE /* AirportDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26187254E0176000B5DEE /* AirportDetailsViewModel.swift */; };
 		6CA2618A254F43EE000B5DEE /* FlightsLocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26189254F43EE000B5DEE /* FlightsLocalLoader.swift */; };
@@ -103,6 +105,9 @@
 		6C47E030254CCD16005FA5A4 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		6C47E032254CCD3F005FA5A4 /* AirportsLocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsLocalLoader.swift; sourceTree = "<group>"; };
 		6C47E034254CD1E3005FA5A4 /* ActivityIndicatorFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorFooter.swift; sourceTree = "<group>"; };
+		6C9BF6B225502CA70080BFC3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		6C9BF6B525502F6D0080BFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C9BF6B725502F730080BFC3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CA26185254DFA70000B5DEE /* AirportDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsController.swift; sourceTree = "<group>"; };
 		6CA26187254E0176000B5DEE /* AirportDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewModel.swift; sourceTree = "<group>"; };
 		6CA26189254F43EE000B5DEE /* FlightsLocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLocalLoader.swift; sourceTree = "<group>"; };
@@ -189,8 +194,10 @@
 				6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */,
 				6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */,
 				6C47DFE5254CBD02005FA5A4 /* Assets.xcassets */,
+				6C9BF6B225502CA70080BFC3 /* Strings.swift */,
 				6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */,
 				6C47DFED254CBD02005FA5A4 /* Info.plist */,
+				6C9BF6B625502F6D0080BFC3 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -377,6 +384,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 6C47DFD3254CBCF9005FA5A4;
 			productRefGroup = 6C47DFDD254CBCF9005FA5A4 /* Products */;
@@ -399,6 +407,7 @@
 				6C47E023254CCAF8005FA5A4 /* AirlinesData.json in Resources */,
 				6C47085F254F821B001E9BE5 /* README.md in Resources */,
 				6C47DFE9254CBD02005FA5A4 /* Preview Assets.xcassets in Resources */,
+				6C9BF6B425502F6D0080BFC3 /* Localizable.strings in Resources */,
 				6C47E029254CCB6D005FA5A4 /* FlightsData.json in Resources */,
 				6C47DFE6254CBD02005FA5A4 /* Assets.xcassets in Resources */,
 			);
@@ -483,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C47085B254F56D2001E9BE5 /* AirlinesTableController.swift in Sources */,
+				6C9BF6B325502CA70080BFC3 /* Strings.swift in Sources */,
 				6C47E031254CCD16005FA5A4 /* Logger.swift in Sources */,
 				6C2D46D5254CD8F60024381D /* AirportsMapController.swift in Sources */,
 				6C2D46D9254CDEA60024381D /* UIView+Constrains.swift in Sources */,
@@ -544,6 +554,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		6C9BF6B625502F6D0080BFC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C9BF6B525502F6D0080BFC3 /* en */,
+				6C9BF6B725502F730080BFC3 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -551,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -611,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

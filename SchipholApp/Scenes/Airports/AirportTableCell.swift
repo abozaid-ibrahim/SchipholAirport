@@ -44,5 +44,6 @@ final class AirportTableCell: UITableViewCell {
         cityLabel.setConstrainsEqualToParent(edge: [.leading, .trailing, .bottom], with: 12)
         NSLayoutConstraint.activate([
             nameLabel.bottomAnchor.constraint(equalTo: cityLabel.topAnchor, constant: -8)])
+        selectionStyle = .none
     }
 }

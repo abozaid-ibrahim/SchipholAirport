@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  SchipholApp
+
+  Created by abuzeid on 02.11.20.
+  Copyright © 2020 abuzeid. All rights reserved.
+*/
+"cancel" = "Absagen";
+"enable_location_permission" = "Um den Standort zu bestimmen, aktivieren Sie 'Location Services' in den Einstellungen Ihres Telefons.";
+"settings" = "Einstellungen";
+"location_error" = "Ort unbekannt";
+"nearest_Airport" = "Nächster Flughafen";
+"map" = "Karte";
+"airports" = "Flughäfen";
+"Airlines" = "Fluggesellschaften";

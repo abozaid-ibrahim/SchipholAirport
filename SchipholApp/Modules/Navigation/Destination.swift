@@ -31,16 +31,16 @@ enum Destination {
             return controller
         case let .map(haveTab):
             let mapvc = AirportsMapController()
-            mapvc.tabBarItem = haveTab ? UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "map"), tag: 0) : nil
+            mapvc.tabBarItem = haveTab ? UITabBarItem(title: Str.map, image: #imageLiteral(resourceName: "map"), tag: 0) : nil
             return mapvc
         case let .airports(haveTab):
             let airports = AirportsTableController()
-            airports.tabBarItem = haveTab ? UITabBarItem(title: "Airports", image: #imageLiteral(resourceName: "plane"), tag: 0) : nil
+            airports.tabBarItem = haveTab ? UITabBarItem(title: Str.airports, image: #imageLiteral(resourceName: "plane"), tag: 0) : nil
             return airports
 
         case let .airlines(haveTab):
             let airline = AirlinesTableController()
-            airline.tabBarItem = haveTab ? UITabBarItem(title: "Airlines", image: #imageLiteral(resourceName: "list"), tag: 0) : nil
+            airline.tabBarItem = haveTab ? UITabBarItem(title: Str.airlines, image: #imageLiteral(resourceName: "list"), tag: 0) : nil
             return airline
         }
     }

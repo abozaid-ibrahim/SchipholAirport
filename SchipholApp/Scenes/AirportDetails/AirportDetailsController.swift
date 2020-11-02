@@ -58,7 +58,7 @@ final class AirportDetailsController: UIViewController {
     lazy var nearstAirportPlaceholder: UILabel = {
         let label = UILabel()
         label.font = .titleFont
-        label.text = "Nearest Airport"
+        label.text = Str.nearestAirport
         return label
     }()
 
@@ -93,7 +93,12 @@ final class AirportDetailsController: UIViewController {
 
 private extension AirportDetailsController {
     func setup() {
-        view.backgroundColor = .white
+        self.title = airport.name
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemGray6
+        } else {
+            view.backgroundColor = .white
+        }
         view.addSubview(mainStack)
         mainStack.setConstrainsEqualToSafeArea(edge: [.top, .trailing, .leading], with: 12)
         mainStack.addArrangedSubview(nameLabel)

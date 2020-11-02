@@ -57,7 +57,6 @@ final class LocationManager: NSObject, LocationManagerType {
     }
 
     private func showLocationPermissionIsRequiredError() {
-        let message = "To determine the location, enable 'Location Services' in the settings of your phone."
         let openSettings: AnyAction = {
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
                 UIApplication.shared.canOpenURL(settingsUrl) else {
@@ -66,7 +65,7 @@ final class LocationManager: NSObject, LocationManagerType {
 
             UIApplication.shared.open(settingsUrl)
         }
-        let error = LocationError(with: message, [(title: "Settings", openSettings)])
+        let error = LocationError(with: Str.enableLocationPermission, [(title: Str.settings, openSettings)])
         self.error.next(error)
     }
 }
@@ -76,12 +75,10 @@ extension LocationManager: CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
         var errorMessage: String?
         switch (error as NSError).code {
-        case CLError.network.rawValue:
-            errorMessage = "Location network error"
         case CLError.denied.rawValue:
             showLocationPermissionIsRequiredError()
         default:
-            errorMessage = "Location unknown"
+            errorMessage = Str.locationError
         }
         guard let message = errorMessage else { return }
         self.error.next(.init(with: message))
