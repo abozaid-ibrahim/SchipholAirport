@@ -34,8 +34,6 @@ extension UIView {
         setConstrainsEqualTo(view: parent, edge: edge, with: margin)
     }
 
-  
-
     func setConstrainsEqualTo(view: UILayoutGuide, edge: Set<Edge>, with margin: Float) {
         translatesAutoresizingMaskIntoConstraints = false
         for edge in edge {
@@ -53,7 +51,7 @@ extension UIView {
             }
         }
     }
-    
+
     func setConstrainsEqualTo(view: UIView, edge: Set<Edge>, with margin: Float) {
         translatesAutoresizingMaskIntoConstraints = false
         for edge in edge {
@@ -71,6 +69,7 @@ extension UIView {
             }
         }
     }
+
     func setConstrainsEqualToSafeArea(edge: Set<Edge>, with margin: Float = 0) {
         guard let parent = superview?.safeAreaLayoutGuide else {
             fatalError("This view doesn't have a parent")
@@ -78,4 +77,3 @@ extension UIView {
         setConstrainsEqualTo(view: parent, edge: edge, with: margin)
     }
 }
-

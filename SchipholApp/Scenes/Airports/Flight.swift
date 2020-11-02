@@ -22,4 +22,3 @@ struct Flight: Codable {
     }
 }
 typealias FlightsList = [Flight]
-

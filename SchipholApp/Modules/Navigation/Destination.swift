@@ -18,14 +18,13 @@ enum Destination {
     var controller: UIViewController {
         switch self {
         case .mainTab:
-            let tab = UITabBarController()
-            tab.setViewControllers([
+            let tabController = UITabBarController()
+            tabController.setViewControllers([
                 Destination.airlines(withTabItem: true).controller,
                 Destination.airports(withTabItem: true).controller,
                 Destination.map(withTabItem: true).controller],
             animated: true)
-
-            return tab
+            return tabController
         case let .airportDetails(airport):
             let viewModel = AirportDetailsViewModel(airport: airport)
             let controller = AirportDetailsController(with: viewModel)

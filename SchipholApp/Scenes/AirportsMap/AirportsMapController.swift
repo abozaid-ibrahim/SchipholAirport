@@ -71,7 +71,6 @@ private extension AirportsMapController {
         mapView.delegate = self
         mapView.register(PointView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-//        mapView.register(PointsClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
 
     func binding() {

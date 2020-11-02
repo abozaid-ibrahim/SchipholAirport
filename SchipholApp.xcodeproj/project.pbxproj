@@ -16,6 +16,7 @@
 		6C2D46DF254CE6D10024381D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D46DE254CE6D10024381D /* LocationManager.swift */; };
 		6C47085B254F56D2001E9BE5 /* AirlinesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47085A254F56D2001E9BE5 /* AirlinesTableController.swift */; };
 		6C47085D254F5722001E9BE5 /* AirportTableCell+Airline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47085C254F5722001E9BE5 /* AirportTableCell+Airline.swift */; };
+		6C47085F254F821B001E9BE5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C47085E254F821A001E9BE5 /* README.md */; };
 		6C47DFE0254CBCF9005FA5A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */; };
 		6C47DFE2254CBCF9005FA5A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */; };
 		6C47DFE6254CBD02005FA5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFE5254CBD02005FA5A4 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		6C2D46DE254CE6D10024381D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6C47085A254F56D2001E9BE5 /* AirlinesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesTableController.swift; sourceTree = "<group>"; };
 		6C47085C254F5722001E9BE5 /* AirportTableCell+Airline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportTableCell+Airline.swift"; sourceTree = "<group>"; };
+		6C47085E254F821A001E9BE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6C47DFDC254CBCF9005FA5A4 /* SchipholApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchipholApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C47DFDF254CBCF9005FA5A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C47DFE1254CBCF9005FA5A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		6C47DFD3254CBCF9005FA5A4 = {
 			isa = PBXGroup;
 			children = (
+				6C47085E254F821A001E9BE5 /* README.md */,
 				6C47DFDE254CBCF9005FA5A4 /* SchipholApp */,
 				6C47DFF5254CBD02005FA5A4 /* SchipholAppTests */,
 				6C47DFDD254CBCF9005FA5A4 /* Products */,
@@ -394,6 +397,7 @@
 				6C47DFEC254CBD02005FA5A4 /* LaunchScreen.storyboard in Resources */,
 				6C47E01D254CCA21005FA5A4 /* AirportsData.json in Resources */,
 				6C47E023254CCAF8005FA5A4 /* AirlinesData.json in Resources */,
+				6C47085F254F821B001E9BE5 /* README.md in Resources */,
 				6C47DFE9254CBD02005FA5A4 /* Preview Assets.xcassets in Resources */,
 				6C47E029254CCB6D005FA5A4 /* FlightsData.json in Resources */,
 				6C47DFE6254CBD02005FA5A4 /* Assets.xcassets in Resources */,
