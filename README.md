@@ -48,11 +48,11 @@ This application uses the Model-View-ViewModel (refered to as MVVM) UI architect
 - Group of app scenes.
 
 ### Points to improve:
-- improve code coverage
-- revisit the UI
-- change langauge switcher button.
+- Improve code coverage
+- Revisit the UI
+- Change langauge switcher button.
 - Highlight the two airports on the map that are the furthest away from each other
-- meter / mile button switcher.
+- Meter / mile button switcher.
 
 #### screen shots:
 
