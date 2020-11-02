@@ -22,7 +22,7 @@
 		6C47DFE6254CBD02005FA5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFE5254CBD02005FA5A4 /* Assets.xcassets */; };
 		6C47DFE9254CBD02005FA5A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFE8254CBD02005FA5A4 /* Preview Assets.xcassets */; };
 		6C47DFEC254CBD02005FA5A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C47DFEA254CBD02005FA5A4 /* LaunchScreen.storyboard */; };
-		6C47DFF7254CBD02005FA5A4 /* SchipholAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */; };
+		6C47DFF7254CBD02005FA5A4 /* AirlinesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47DFF6254CBD02005FA5A4 /* AirlinesViewModelTests.swift */; };
 		6C47E007254CC2D1005FA5A4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E005254CC285005FA5A4 /* Destination.swift */; };
 		6C47E008254CC2D1005FA5A4 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E006254CC285005FA5A4 /* Navigator.swift */; };
 		6C47E00A254CC5D8005FA5A4 /* AirportsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E009254CC5D8005FA5A4 /* AirportsTableController.swift */; };
@@ -82,7 +82,7 @@
 		6C47DFEB254CBD02005FA5A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C47DFED254CBD02005FA5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C47DFF2254CBD02005FA5A4 /* SchipholAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchipholAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchipholAppTests.swift; sourceTree = "<group>"; };
+		6C47DFF6254CBD02005FA5A4 /* AirlinesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesViewModelTests.swift; sourceTree = "<group>"; };
 		6C47DFF8254CBD02005FA5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C47E005254CC285005FA5A4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		6C47E006254CC285005FA5A4 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		6C47DFF5254CBD02005FA5A4 /* SchipholAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				6C47DFF6254CBD02005FA5A4 /* SchipholAppTests.swift */,
+				6C47DFF6254CBD02005FA5A4 /* AirlinesViewModelTests.swift */,
 				6C47DFF8254CBD02005FA5A4 /* Info.plist */,
 			);
 			path = SchipholAppTests;
@@ -531,7 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C47DFF7254CBD02005FA5A4 /* SchipholAppTests.swift in Sources */,
+				6C47DFF7254CBD02005FA5A4 /* AirlinesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

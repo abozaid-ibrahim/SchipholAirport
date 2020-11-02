@@ -10,7 +10,7 @@ import UIKit
 
 final class AirlinesTableController: UITableViewController {
     private let viewModel: AirlinesViewModelType
-    private var dataList: [Airline] { viewModel.dataList }
+    private var dataList: [Airline] = []
 
     init(with viewModel: AirlinesViewModelType = AirlinesViewModel()) {
         self.viewModel = viewModel
@@ -53,8 +53,9 @@ private extension AirlinesTableController {
     }
 
     func bindToViewModel() {
-        viewModel.reloadData.subscribe { [weak self] reload in
-            if reload { self?.tableView.reloadData() }
+        viewModel.airlinesList.subscribe { [weak self] data in
+            self?.dataList = data
+            self?.tableView.reloadData()
         }
         viewModel.isLoading.subscribe { [weak self] isLoading in
             guard let self = self else { return }

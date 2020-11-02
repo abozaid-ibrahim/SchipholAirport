@@ -9,10 +9,9 @@
 import Foundation
 
 protocol AirlinesViewModelType {
-    var reloadData: Observable<Bool> { get }
+    var airlinesList: Observable<[Airline]> { get }
     var error: Observable<String?> { get }
     var isLoading: Observable<Bool> { get }
-    var dataList: [Airline] { get }
     func loadData()
 }
 
@@ -20,10 +19,9 @@ final class AirlinesViewModel: AirlinesViewModelType {
     private let airlinesLoader: AirlinesDataSource
     private let flightsLoader: FlightsDataSource
     private let airportsLoader: AirportsDataSource
-    let reloadData: Observable<Bool> = .init(false)
+    let airlinesList: Observable<[Airline]> = .init([])
     let isLoading: Observable<Bool> = .init(false)
     let error: Observable<String?> = .init(nil)
-    private(set) var dataList: [Airline] = []
 
     init(airlinesLoader: AirlinesDataSource = AirlinesLocalLoader(),
          flightsLoader: FlightsDataSource = FlightsLocalLoader(),
@@ -61,8 +59,8 @@ final class AirlinesViewModel: AirlinesViewModelType {
         dispatchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
             guard let self = self else { return }
             let flights = self.filter(flightsList, with: airports)
-            self.dataList = self.getSortedAirlines(flights: flights, airlines: airlines)
-            self.reloadData.next(true)
+            let dataList = self.getSortedAirlines(flights: flights, airlines: airlines)
+            self.airlinesList.next(dataList)
             self.isLoading.next(false)
         }
     }
