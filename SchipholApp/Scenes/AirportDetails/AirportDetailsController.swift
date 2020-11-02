@@ -85,8 +85,8 @@ final class AirportDetailsController: UIViewController {
         super.viewDidLoad()
         setup()
         viewModel.loadData()
-        viewModel.nearestAirport.subscribe { [unowned self] text in
-            self.nearstAirportLabel.text = text
+        viewModel.nearestAirport.subscribe { [weak self] text in
+            self?.nearstAirportLabel.text = text
         }
     }
 

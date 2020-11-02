@@ -9,14 +9,14 @@
 import UIKit
 
 final class AirportTableCell: UITableViewCell {
-    private lazy var nameLabel: UILabel = {
+    private(set) lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16)
         label.accessibilityIdentifier = AccessibilityId.cellNameLabel
         return label
     }()
 
-    private lazy var cityLabel: UILabel = {
+    private(set) lazy var cityLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
         label.textColor = .gray

@@ -64,7 +64,7 @@ private extension AirportsMapController {
     }
 
     func binding() {
-        viewModel.reloadData.subscribe { [weak self] reload in
+        viewModel.airportsList.subscribe { [weak self] reload in
             let annotations = reload.compactMap(PointAnnotation.init)
             self?.mapView.addAnnotations(annotations)
         }
