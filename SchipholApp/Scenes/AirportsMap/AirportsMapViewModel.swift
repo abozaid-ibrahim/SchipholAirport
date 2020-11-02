@@ -24,13 +24,15 @@ final class AirportsMapViewModel: AirportsMapViewModelType {
     }
 
     func loadData() {
-        dataLoader.loadAirports { [weak self] data in
+        DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
-            switch data {
-            case let .success(response):
-                self.reloadData.next(response)
-            case let .failure(error):
-                self.error.next(error.localizedDescription)
+            self.dataLoader.loadAirports { data in
+                switch data {
+                case let .success(response):
+                    self.reloadData.next(response)
+                case let .failure(error):
+                    self.error.next(error.localizedDescription)
+                }
             }
         }
     }

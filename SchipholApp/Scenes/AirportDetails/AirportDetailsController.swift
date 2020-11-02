@@ -9,9 +9,9 @@
 import UIKit
 
 final class AirportDetailsController: UIViewController {
-    private let viewModel: AirportDetailsViewModel
+    private let viewModel: AirportDetailsViewModelType
 
-    init(with viewModel: AirportDetailsViewModel) {
+    init(with viewModel: AirportDetailsViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,6 +35,9 @@ final class AirportDetailsController: UIViewController {
         let label = UILabel()
         label.font = .titleFont
         label.text = airport.name
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
         return label
     }()
 
@@ -62,13 +65,19 @@ final class AirportDetailsController: UIViewController {
     lazy var nearstAirportLabel: UILabel = {
         let label = UILabel()
         label.font = .seconderyFont
-        label.text = self.viewModel.nearestAirport
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
         return label
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        viewModel.loadData()
+        viewModel.nearestAirport.subscribe { [unowned self] text in
+            self.nearstAirportLabel.text = text
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +105,6 @@ private extension AirportDetailsController {
 }
 
 extension UIFont {
-    static var titleFont: UIFont { UIFont.systemFont(ofSize: 24) }
+    static var titleFont: UIFont { UIFont.systemFont(ofSize: 20) }
     static var seconderyFont: UIFont { UIFont.systemFont(ofSize: 16) }
 }

@@ -9,15 +9,52 @@
 import CoreLocation
 import Foundation
 
-final class AirportDetailsViewModel {
-    let airport: Airport
+protocol AirportDetailsViewModelType {
+    var airport: Airport { get }
+    var nearestAirport: Observable<String?> { get }
+    func loadData()
+}
 
-    init(airport: Airport) {
+final class AirportDetailsViewModel: AirportDetailsViewModelType {
+    let airport: Airport
+    private let dataLoader: AirportsDataSource
+    let nearestAirport: Observable<String?> = .init(nil)
+    let error: Observable<String?> = .init(nil)
+
+    init(loader: AirportsDataSource = AirportsLocalLoader(),
+         airport: Airport) {
         self.airport = airport
+        dataLoader = loader
     }
 
-    var nearestAirport: String {
-        return Airport.schipholAirport.distance(to: airport).formatted
+    func loadData() {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+            self.dataLoader.loadAirports { data in
+                switch data {
+                case let .success(response):
+                    self.nearestAirport(of: response)
+                case let .failure(error):
+                    self.error.next(error.localizedDescription)
+                }
+            }
+        }
+    }
+
+    private func nearestAirport(of airports: [Airport]) {
+        var nearest: Airport?
+        var minDistance = Double.infinity
+        for value in airports {
+            let dest = airport.distance(to: value)
+            if dest < minDistance {
+                nearest = value
+                minDistance = dest
+            }
+        }
+        guard let airport = nearest else { return }
+        let text = "\(airport.name)\n\(airport.address)\n\(minDistance)"
+
+        nearestAirport.next(text)
     }
 }
 

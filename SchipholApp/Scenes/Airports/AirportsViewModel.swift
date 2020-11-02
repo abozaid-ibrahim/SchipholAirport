@@ -31,38 +31,25 @@ final class AirportsViewModel: AirportsViewModelType {
     }
 
     func loadData() {
-        let dispatchGroup = DispatchGroup()
-        var airports: AirportsList = []
-        var flights: [String: String] = [:]
         isLoading.next(true)
+        let dispatchGroup = DispatchGroup()
+
+        var airports: AirportsList = []
         dispatchGroup.enter()
-        airportsLoader.loadAirports { [weak self] data in
-            guard let self = self else { return }
-            switch data {
-            case let .success(response):
-                airports = response
-            case let .failure(error):
-                self.error.next(error.localizedDescription)
-            }
-            self.isLoading.next(false)
+        getAirports {
+            airports = $0
             dispatchGroup.leave()
         }
+
+        var flights: [String: String] = [:]
         dispatchGroup.enter()
-
-        flightsLoader.loadFlights { [weak self] data in
-            guard let self = self else { return }
-            switch data {
-            case let .success(response):
-                for flight in response {
-                    flights[flight.arrivalAirportID] = flight.departureAirportID
-                }
-            case let .failure(error):
-                self.error.next(error.localizedDescription)
-            }
-
+        getFlights {
+            flights = $0
             dispatchGroup.leave()
         }
-        dispatchGroup.notify(queue: DispatchQueue.main) {
+
+        dispatchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
+            guard let self = self else { return }
             let sources = airports.filter { flights[$0.id] == Airport.schipholAirport.id }
                 .sorted(by: {
                     $0.distance(to: Airport.schipholAirport) < $1.distance(to: Airport.schipholAirport)
@@ -70,6 +57,42 @@ final class AirportsViewModel: AirportsViewModelType {
             self.dataList = sources
             self.reloadData.next(true)
             self.isLoading.next(false)
+        }
+    }
+}
+
+private extension AirportsViewModel {
+    func getAirports(callback: @escaping ([Airport]) -> Void) {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+            self.airportsLoader.loadAirports { data in
+                switch data {
+                case let .success(response):
+                    callback(response)
+                case let .failure(error):
+                    self.error.next(error.localizedDescription)
+                    callback([])
+                }
+            }
+        }
+    }
+
+    func getFlights(callback: @escaping ([String: String]) -> Void) {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+            self.flightsLoader.loadFlights { data in
+                switch data {
+                case let .success(response):
+                    var flights: [String: String] = [:]
+                    for flight in response {
+                        flights[flight.arrivalAirportID] = flight.departureAirportID
+                    }
+                    callback(flights)
+                case let .failure(error):
+                    self.error.next(error.localizedDescription)
+                    callback([:])
+                }
+            }
         }
     }
 }

@@ -68,7 +68,7 @@ final class AirlinesViewModel: AirlinesViewModelType {
     }
 }
 
-extension AirlinesViewModel {
+private extension AirlinesViewModel {
     func filter(_ flightsList: [Flight], with airports: [String: Airport]) -> [String: Double] {
         var flights: [String: Double] = [:]
         for flight in flightsList
