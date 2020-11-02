@@ -11,7 +11,6 @@ enum NetworkError: LocalizedError {
     case badRequest
     case noData
     case failedToParseData
-    case apiError(String)
     var errorDescription: String? {
         switch self {
         case .failedToParseData:

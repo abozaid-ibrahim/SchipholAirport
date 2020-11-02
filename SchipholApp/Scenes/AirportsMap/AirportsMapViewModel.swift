@@ -9,14 +9,14 @@
 import Foundation
 
 protocol AirportsMapViewModelType {
-    var reloadData: Observable<[Airport]> { get }
+    var airportsList: Observable<[Airport]> { get }
     var error: Observable<String?> { get }
     func loadData()
 }
 
 final class AirportsMapViewModel: AirportsMapViewModelType {
     private let dataLoader: AirportsDataSource
-    let reloadData: Observable<[Airport]> = .init([])
+    let airportsList: Observable<[Airport]> = .init([])
     let error: Observable<String?> = .init(nil)
 
     init(loader: AirportsDataSource = AirportsLocalLoader()) {
@@ -29,7 +29,7 @@ final class AirportsMapViewModel: AirportsMapViewModelType {
             self.dataLoader.loadAirports { data in
                 switch data {
                 case let .success(response):
-                    self.reloadData.next(response)
+                    self.airportsList.next(response)
                 case let .failure(error):
                     self.error.next(error.localizedDescription)
                 }

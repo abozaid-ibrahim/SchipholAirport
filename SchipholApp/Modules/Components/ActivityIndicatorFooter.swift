@@ -10,8 +10,13 @@ import Foundation
 import UIKit
 
 final class ActivityIndicatorFooterView: UIView {
-    private var activityView: UIActivityIndicatorView!
+    private let activityView: UIActivityIndicatorView
     override init(frame: CGRect) {
+        if #available(iOS 13, *) {
+            activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        } else {
+            activityView = UIActivityIndicatorView(style: .gray)
+        }
         super.init(frame: frame)
         setup()
     }
@@ -30,11 +35,6 @@ final class ActivityIndicatorFooterView: UIView {
     }
 
     private func setup() {
-        if #available(iOS 13, *) {
-            activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        } else {
-            activityView = UIActivityIndicatorView(style: .gray)
-        }
         activityView.hidesWhenStopped = true
         activityView.startAnimating()
         addSubview(activityView)

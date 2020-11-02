@@ -6,7 +6,6 @@
 //  Copyright © 2020 abuzeid. All rights reserved.
 //
 
-import CoreLocation
 import Foundation
 
 protocol AirportDetailsViewModelType {
@@ -17,9 +16,9 @@ protocol AirportDetailsViewModelType {
 
 final class AirportDetailsViewModel: AirportDetailsViewModelType {
     let airport: Airport
-    private let dataLoader: AirportsDataSource
     let nearestAirport: Observable<String?> = .init(nil)
     let error: Observable<String?> = .init(nil)
+    private let dataLoader: AirportsDataSource
 
     init(loader: AirportsDataSource = AirportsLocalLoader(),
          airport: Airport) {
@@ -61,18 +60,5 @@ final class AirportDetailsViewModel: AirportDetailsViewModelType {
 extension Airport {
     var address: String {
         "\(city ?? ""), \(countryID ?? "")"
-    }
-}
-
-extension CLLocationDistance {
-    var formatted: String {
-        let lengthFormatter = LengthFormatter()
-        lengthFormatter.numberFormatter.maximumFractionDigits = 1
-
-        if NSLocale.current.usesMetricSystem {
-            return lengthFormatter.string(fromValue: self / 1000, unit: .kilometer)
-        } else {
-            return lengthFormatter.string(fromValue: self / 1609.34, unit: .mile)
-        }
     }
 }

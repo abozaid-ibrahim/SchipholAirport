@@ -115,9 +115,7 @@ private extension AirlinesViewModel {
                 switch data {
                 case let .success(response):
                     var airports: [String: Airport] = [:]
-                    for airport in response {
-                        airports[airport.id] = airport
-                    }
+                    response.forEach { airports[$0.id] = $0 }
                     callback(airports)
                 case let .failure(error):
                     self.error.next(error.localizedDescription)

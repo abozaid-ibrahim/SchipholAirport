@@ -14,7 +14,7 @@ final class AirportsTableController: UITableViewController {
 
     init(with viewModel: AirportsViewModelType = AirportsViewModel()) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: Bundle(for: AirportsTableController.self))
+        super.init(nibName: nil, bundle: nil)
     }
 
     @available(*, unavailable)

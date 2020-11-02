@@ -15,21 +15,16 @@ enum Edge {
 }
 
 extension UIView {
-    func setConstrainsEqualToParentEdges(top: Float = 0, bottom: Float = 0, leading: Float = 0, trailing: Float = 0) {
-        guard let parent = superview else {
-            fatalError("This view doesn't have a parent")
-        }
-        translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: CGFloat(leading)),
-            trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: -CGFloat(trailing)),
-            topAnchor.constraint(equalTo: parent.topAnchor, constant: CGFloat(top)),
-            bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -CGFloat(bottom))])
-    }
-
     func setConstrainsEqualToParent(edge: Set<Edge>, with margin: Float = 0) {
         guard let parent = superview else {
             fatalError("This view doesn't have a parent")
+        }
+        setConstrainsEqualTo(view: parent, edge: edge, with: margin)
+    }
+
+    func setConstrainsEqualToSafeArea(edge: Set<Edge>, with margin: Float = 0) {
+        guard let parent = superview?.safeAreaLayoutGuide else {
+            fatalError("This view doesn't have a parent | safe area")
         }
         setConstrainsEqualTo(view: parent, edge: edge, with: margin)
     }
@@ -39,7 +34,7 @@ extension UIView {
         for edge in edge {
             switch edge {
             case .all:
-                setConstrainsEqualToParentEdges(top: margin, bottom: margin, leading: margin, trailing: margin)
+                setConstrainsEqualTo(view: view, edge: [.leading, .trailing, .top, .bottom], with: margin)
             case .leading:
                 leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CGFloat(margin)).isActive = true
             case .trailing:
@@ -57,7 +52,7 @@ extension UIView {
         for edge in edge {
             switch edge {
             case .all:
-                setConstrainsEqualToParentEdges(top: margin, bottom: margin, leading: margin, trailing: margin)
+                setConstrainsEqualTo(view: view, edge: [.leading, .trailing, .top, .bottom], with: margin)
             case .leading:
                 leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CGFloat(margin)).isActive = true
             case .trailing:
@@ -68,12 +63,5 @@ extension UIView {
                 bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -CGFloat(margin)).isActive = true
             }
         }
-    }
-
-    func setConstrainsEqualToSafeArea(edge: Set<Edge>, with margin: Float = 0) {
-        guard let parent = superview?.safeAreaLayoutGuide else {
-            fatalError("This view doesn't have a parent")
-        }
-        setConstrainsEqualTo(view: parent, edge: edge, with: margin)
     }
 }

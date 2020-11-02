@@ -54,12 +54,10 @@ extension AirportsMapController: MKMapViewDelegate {
     }
 }
 
-// MARK: location manager
-
 private extension AirportsMapController {
     func setup() {
         view.addSubview(mapView)
-        mapView.setConstrainsEqualToParentEdges()
+        mapView.setConstrainsEqualToParent(edge: [.all])
         mapView.delegate = self
         mapView.register(PointView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)

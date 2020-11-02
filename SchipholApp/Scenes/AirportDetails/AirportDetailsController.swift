@@ -23,7 +23,7 @@ final class AirportDetailsController: UIViewController {
 
     private var airport: Airport { viewModel.airport }
 
-    lazy var mainStack: UIStackView = {
+    private lazy var mainStack: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .fill
         stack.distribution = .fill
@@ -32,7 +32,7 @@ final class AirportDetailsController: UIViewController {
         return stack
     }()
 
-    lazy var nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .titleFont
         label.accessibilityIdentifier = AccessibilityId.airportNameLabel
@@ -43,21 +43,21 @@ final class AirportDetailsController: UIViewController {
         return label
     }()
 
-    lazy var locationLabel: UILabel = {
+    private lazy var locationLabel: UILabel = {
         let label = UILabel()
         label.font = .seconderyFont
         label.text = "\(airport.latitude), \(airport.longitude)"
         return label
     }()
 
-    lazy var addressLabel: UILabel = {
+    private lazy var addressLabel: UILabel = {
         let label = UILabel()
         label.font = .seconderyFont
         label.text = airport.address
         return label
     }()
 
-    lazy var sperator: UIView = {
+    private lazy var sperator: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -65,14 +65,14 @@ final class AirportDetailsController: UIViewController {
         return view
     }()
 
-    lazy var nearstAirportPlaceholder: UILabel = {
+    private lazy var nearstAirportPlaceholder: UILabel = {
         let label = UILabel()
         label.font = .titleFont
         label.text = Str.nearestAirport
         return label
     }()
 
-    lazy var nearstAirportLabel: UILabel = {
+    private lazy var nearstAirportLabel: UILabel = {
         let label = UILabel()
         label.font = .seconderyFont
         label.lineBreakMode = .byWordWrapping
