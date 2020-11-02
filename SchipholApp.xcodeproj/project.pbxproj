@@ -46,6 +46,7 @@
 		6C47E035254CD1E3005FA5A4 /* ActivityIndicatorFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47E034254CD1E3005FA5A4 /* ActivityIndicatorFooter.swift */; };
 		6C9BF6B325502CA70080BFC3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9BF6B225502CA70080BFC3 /* Strings.swift */; };
 		6C9BF6B425502F6D0080BFC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C9BF6B625502F6D0080BFC3 /* Localizable.strings */; };
+		6C9BF6C7255036130080BFC3 /* SchipholAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9BF6C6255036130080BFC3 /* SchipholAppUITests.swift */; };
 		6CA26186254DFA70000B5DEE /* AirportDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26185254DFA70000B5DEE /* AirportDetailsController.swift */; };
 		6CA26188254E0176000B5DEE /* AirportDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26187254E0176000B5DEE /* AirportDetailsViewModel.swift */; };
 		6CA2618A254F43EE000B5DEE /* FlightsLocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA26189254F43EE000B5DEE /* FlightsLocalLoader.swift */; };
@@ -55,6 +56,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		6C47DFF3254CBD02005FA5A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C47DFD4254CBCF9005FA5A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C47DFDB254CBCF9005FA5A4;
+			remoteInfo = SchipholApp;
+		};
+		6C9BF6C9255036130080BFC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C47DFD4254CBCF9005FA5A4 /* Project object */;
 			proxyType = 1;
@@ -108,6 +116,9 @@
 		6C9BF6B225502CA70080BFC3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		6C9BF6B525502F6D0080BFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C9BF6B725502F730080BFC3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C9BF6C4255036130080BFC3 /* SchipholAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchipholAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C9BF6C6255036130080BFC3 /* SchipholAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchipholAppUITests.swift; sourceTree = "<group>"; };
+		6C9BF6C8255036130080BFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CA26185254DFA70000B5DEE /* AirportDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsController.swift; sourceTree = "<group>"; };
 		6CA26187254E0176000B5DEE /* AirportDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewModel.swift; sourceTree = "<group>"; };
 		6CA26189254F43EE000B5DEE /* FlightsLocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLocalLoader.swift; sourceTree = "<group>"; };
@@ -136,6 +147,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C9BF6C1255036130080BFC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +163,7 @@
 				6C47085E254F821A001E9BE5 /* README.md */,
 				6C47DFDE254CBCF9005FA5A4 /* SchipholApp */,
 				6C47DFF5254CBD02005FA5A4 /* SchipholAppTests */,
+				6C9BF6C5255036130080BFC3 /* SchipholAppUITests */,
 				6C47DFDD254CBCF9005FA5A4 /* Products */,
 				9BC029B16F66EF34FA1B805C /* Pods */,
 				A27E416938598C556C677D7D /* Frameworks */,
@@ -156,6 +175,7 @@
 			children = (
 				6C47DFDC254CBCF9005FA5A4 /* SchipholApp.app */,
 				6C47DFF2254CBD02005FA5A4 /* SchipholAppTests.xctest */,
+				6C9BF6C4255036130080BFC3 /* SchipholAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,6 +317,15 @@
 			path = AirportDetails;
 			sourceTree = "<group>";
 		};
+		6C9BF6C5255036130080BFC3 /* SchipholAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6C9BF6C6255036130080BFC3 /* SchipholAppUITests.swift */,
+				6C9BF6C8255036130080BFC3 /* Info.plist */,
+			);
+			path = SchipholAppUITests;
+			sourceTree = "<group>";
+		};
 		9BC029B16F66EF34FA1B805C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +387,24 @@
 			productReference = 6C47DFF2254CBD02005FA5A4 /* SchipholAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6C9BF6C3255036130080BFC3 /* SchipholAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C9BF6CB255036130080BFC3 /* Build configuration list for PBXNativeTarget "SchipholAppUITests" */;
+			buildPhases = (
+				6C9BF6C0255036130080BFC3 /* Sources */,
+				6C9BF6C1255036130080BFC3 /* Frameworks */,
+				6C9BF6C2255036130080BFC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C9BF6CA255036130080BFC3 /* PBXTargetDependency */,
+			);
+			name = SchipholAppUITests;
+			productName = SchipholAppUITests;
+			productReference = 6C9BF6C4255036130080BFC3 /* SchipholAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -372,6 +419,10 @@
 						CreatedOnToolsVersion = 11.5;
 					};
 					6C47DFF1254CBD02005FA5A4 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 6C47DFDB254CBCF9005FA5A4;
+					};
+					6C9BF6C3255036130080BFC3 = {
 						CreatedOnToolsVersion = 11.5;
 						TestTargetID = 6C47DFDB254CBCF9005FA5A4;
 					};
@@ -393,6 +444,7 @@
 			targets = (
 				6C47DFDB254CBCF9005FA5A4 /* SchipholApp */,
 				6C47DFF1254CBD02005FA5A4 /* SchipholAppTests */,
+				6C9BF6C3255036130080BFC3 /* SchipholAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -414,6 +466,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6C47DFF0254CBD02005FA5A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C9BF6C2255036130080BFC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -535,6 +594,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C9BF6C0255036130080BFC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9BF6C7255036130080BFC3 /* SchipholAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -542,6 +609,11 @@
 			isa = PBXTargetDependency;
 			target = 6C47DFDB254CBCF9005FA5A4 /* SchipholApp */;
 			targetProxy = 6C47DFF3254CBD02005FA5A4 /* PBXContainerItemProxy */;
+		};
+		6C9BF6CA255036130080BFC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C47DFDB254CBCF9005FA5A4 /* SchipholApp */;
+			targetProxy = 6C9BF6C9255036130080BFC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -770,6 +842,46 @@
 			};
 			name = Release;
 		};
+		6C9BF6CC255036130080BFC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 475YN7ANSF;
+				INFOPLIST_FILE = SchipholAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abozaid.SchipholAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SchipholApp;
+			};
+			name = Debug;
+		};
+		6C9BF6CD255036130080BFC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 475YN7ANSF;
+				INFOPLIST_FILE = SchipholAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abozaid.SchipholAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SchipholApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -796,6 +908,15 @@
 			buildConfigurations = (
 				6C47DFFF254CBD02005FA5A4 /* Debug */,
 				6C47E000254CBD02005FA5A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C9BF6CB255036130080BFC3 /* Build configuration list for PBXNativeTarget "SchipholAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C9BF6CC255036130080BFC3 /* Debug */,
+				6C9BF6CD255036130080BFC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

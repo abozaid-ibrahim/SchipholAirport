@@ -27,7 +27,7 @@ final class AirlinesTableController: UITableViewController {
         tableView.tableFooterView = ActivityIndicatorFooterView()
         tableView.register(AirportTableCell.self, forCellReuseIdentifier: AirportTableCell.identifier)
         bindToViewModel()
-        viewModel.loadData()
+        viewModel.loadAirlinesData(of: Airport.schipholAirport)
     }
 }
 

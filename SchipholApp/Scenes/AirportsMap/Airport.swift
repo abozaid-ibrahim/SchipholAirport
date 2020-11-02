@@ -28,7 +28,7 @@ import CoreLocation
 extension Airport {
     func distance(to airport: Airport) -> Double {
         let fromCoordinate = CLLocation(latitude: latitude, longitude: longitude)
-        let toCoordinate = CLLocation(latitude: airport.latitude, longitude: airport.latitude)
+        let toCoordinate = CLLocation(latitude: airport.latitude, longitude: airport.longitude)
         return toCoordinate.distance(from: fromCoordinate)
     }
 

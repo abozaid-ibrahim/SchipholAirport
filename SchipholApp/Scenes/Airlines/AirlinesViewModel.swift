@@ -12,7 +12,7 @@ protocol AirlinesViewModelType {
     var airlinesList: Observable<[Airline]> { get }
     var error: Observable<String?> { get }
     var isLoading: Observable<Bool> { get }
-    func loadData()
+    func loadAirlinesData(of current: Airport)
 }
 
 final class AirlinesViewModel: AirlinesViewModelType {
@@ -31,7 +31,7 @@ final class AirlinesViewModel: AirlinesViewModelType {
         self.airportsLoader = airportsLoader
     }
 
-    func loadData() {
+    func loadAirlinesData(of current: Airport) {
         isLoading.next(true)
         let dispatchGroup = DispatchGroup()
 
@@ -58,8 +58,8 @@ final class AirlinesViewModel: AirlinesViewModelType {
 
         dispatchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
             guard let self = self else { return }
-            let flights = self.filter(flightsList, with: airports)
-            let dataList = self.getSortedAirlines(flights: flights, airlines: airlines)
+            let flights = self.flightsStarts(from: current, flightsList, with: airports)
+            let dataList = self.getAirlinesSortedByDistance(flights: flights, airlines: airlines)
             self.airlinesList.next(dataList)
             self.isLoading.next(false)
         }
@@ -67,27 +67,28 @@ final class AirlinesViewModel: AirlinesViewModelType {
 }
 
 private extension AirlinesViewModel {
-    func filter(_ flightsList: [Flight], with airports: [String: Airport]) -> [String: Double] {
+    func flightsStarts(from: Airport, _ flightsList: [Flight], with airports: [String: Airport]) -> [String: Double] {
         var flights: [String: Double] = [:]
         for flight in flightsList
-            where flight.departureAirportID == Airport.schipholAirport.id {
-            let distance = airports[flight.arrivalAirportID]?.distance(to: Airport.schipholAirport) ?? 0
+            where flight.departureAirportID == from.id {
+            guard let toAirport = airports[flight.arrivalAirportID] else { continue }
+            let distance = from.distance(to: toAirport)
             flights[flight.airlineID] = flights[flight.airlineID] ?? 0 + distance
         }
         return flights
     }
 
-    func getSortedAirlines(flights: [String: Double], airlines: [Airline]) -> [Airline] {
-        var selectedAirlines: [Airline] = []
-        selectedAirlines.reserveCapacity(min(airlines.capacity, flights.count))
+    func getAirlinesSortedByDistance(flights: [String: Double], airlines: [Airline]) -> [Airline] {
+        var airlinesWithFlights: [Airline] = []
+        airlinesWithFlights.reserveCapacity(min(airlines.capacity, flights.count))
 
         for airline in airlines {
             guard let distance = flights[airline.id], distance > 0 else { continue }
-            var obj = airline
-            obj.totalDistance = distance
-            selectedAirlines.append(obj)
+            var airlineWithDistancew = airline
+            airlineWithDistancew.totalDistance = distance
+            airlinesWithFlights.append(airlineWithDistancew)
         }
-        return selectedAirlines.sorted(by: {
+        return airlinesWithFlights.sorted(by: {
             $0.totalDistance ?? 0 < $1.totalDistance ?? 0
         })
     }

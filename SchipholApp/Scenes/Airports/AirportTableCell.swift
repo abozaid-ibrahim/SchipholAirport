@@ -12,6 +12,7 @@ final class AirportTableCell: UITableViewCell {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16)
+        label.accessibilityIdentifier = "nameLabel"
         return label
     }()
 
